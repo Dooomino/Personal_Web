@@ -146,28 +146,3 @@ ul {  /*调整ul标签的样式，取消内边距、外边距，和“点”样�
     opacity: 0.2;
     transform: rotateX(-45deg);
 }
-
-.subcontain{
-    position: absolute;
-    top: 0px;
-    width: 200%;
-    height: 70%;
-    background-color: black;
-    transform: translate(-10%,0);
-    z-index: -1;
-    animation: incont 1.5s cubic-bezier(.1,.86,.72,.86) 1;
-}
-
-@keyframes incont{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-    
-
-body{
-    background-color: #a06ce4;  
-}

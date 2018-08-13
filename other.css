@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
+
+.subcontain{
+    position: absolute;
+    top: 0px;
+    width: 200%;
+    height: 70%;
+    background-color: black;
+    transform: translate(-10%,0);
+    z-index: -1;
+    animation: incont 1.5s cubic-bezier(.1,.86,.72,.86) 1;
+}
+
+@keyframes incont{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+body{
+    background-color: #a06ce4;
+}
+
+
 .menu a{
     display: block;/*将a变成块状*/
     width: 100px;/*设置块的宽度*/
