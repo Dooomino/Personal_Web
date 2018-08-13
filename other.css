@@ -28,26 +28,56 @@ body{
 
 
 .menu a{
-    display: block;/*将a变成块状*/
-    width: 100px;/*设置块的宽度*/
+    display:block;/*将a变成块状*/
+    width: 130px;/*设置块的宽度*/
     height: 50px;/*设置块的长度*/
     font-family: 'Open Sans Condensed', sans-serif;
-    line-height: 50px;/*设置字体在块中的高度*/
+    line-height: 100%;/*设置字体在块中的高度*/
     background-color: #666cdb;
     margin: 0px 0px;/*块里的高宽通过margin设置*/
     color: #ffffff;
     text-align: center;/*字体居中*/
     text-decoration: none;/*去掉下划线*/
-    font-size: 15px;
+    font-size: 30px;
 }
 .menu a:hover{
+    height: auto;
+    animation-fill-mode: forwards;
     background-color: #8a8dc1;
+    animation: hoverin 5s cubic-bezier(.1,.86,.72,.86) 1; 
 }
 
 .menu li{
     list-style-type: none;
     float: left;
+    width: auto;
+    height: auto;
+    animation-fill-mode: forwards;
     animation: menuin 1s cubic-bezier(.1,.86,.72,.86) 1; 
+}
+
+@keyframes hoverin{
+    0%{
+        opacity: 0;
+        background-color: #4442c1;
+    }
+    20%{
+        opacity: 0.8;
+    }
+    40%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    70%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+        background-color: #8a8dc1;
+    }
+    
 }
 
 @keyframes menuin{
@@ -63,22 +93,24 @@ body{
 
 
 .menu>li:nth-child(0){
-    animation-delay: 0.2s;
+    animation-delay: 1.2s;
 }
 .menu>li:nth-child(2){
-    animation-delay: 0.4s;
+    animation-delay: 1.4s;
 }
 .menu>li:nth-child(3){
-    animation-delay: 0.6s;
+    animation-delay: 1.6s;
 }
 .menu>li:nth-child(4){
-    animation-delay: 0.8s;
+    animation-delay: 1.8s;
 }
 
 .menu ul{
-    margin: 30px auto;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
     width: 100%;
-    height: 350px;
+    height: auto;
     padding: 0px;
 }
 
