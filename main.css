@@ -74,7 +74,7 @@ ul {  /*调整ul标签的样式，取消内边距、外边距，和“点”样�
     
     
 }
-li{
+.sd li{
     list-style: none;
     animation: cal 10s linear infinite;
 }
@@ -151,11 +151,11 @@ li{
     position: absolute;
     top: 0px;
     width: 200%;
-    height: 60%;
+    height: 70%;
     background-color: black;
     transform: translate(-10%,0);
     z-index: -1;
-    animation: incont 1s cubic-bezier(.1,.86,.72,.86) 1;
+    animation: incont 1.5s cubic-bezier(.1,.86,.72,.86) 1;
 }
 
 @keyframes incont{
