@@ -7,7 +7,7 @@ ul {  /*调整ul标签的样式，取消内边距、外边距，和“点”样�
 }
 .stage {  /*设置舞台元素在屏幕居中，设置合适的景深大小*/
     margin: auto;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -16,7 +16,19 @@ ul {  /*调整ul标签的样式，取消内边距、外边距，和“点”样�
     height: 200px;
     margin: 100px auto;
     perspective: 800px;
+    animation: instage 0.5s cubic-bezier(.1,.86,.72,.86) 1;
 }
+
+@keyframes instage{
+    0%{
+        top:-100%;
+    }
+    100%{
+        top:0;
+    }
+}
+
+
 @keyframes move { /*设置动画关键帧*/
     0%{
         transform:  rotateY(0deg) rotateX(45deg) rotateZ(45deg) ;
@@ -63,6 +75,7 @@ ul {  /*调整ul标签的样式，取消内边距、外边距，和“点”样�
     
 }
 li{
+    list-style: none;
     animation: cal 10s linear infinite;
 }
 
@@ -90,6 +103,7 @@ li{
     font-family: 'Open Sans Condensed', sans-serif;
     color: aqua;
     animation: textmove 1s cubic-bezier(.46,-0.02,.17,.84) 1;
+    animation-delay: 0.2s;
 }
 
 
@@ -131,4 +145,29 @@ li{
     background-color:  coral;
     opacity: 0.2;
     transform: rotateX(-45deg);
+}
+
+.subcontain{
+    position: absolute;
+    top: 0px;
+    width: 200%;
+    height: 60%;
+    background-color: black;
+    transform: translate(-10%,0);
+    z-index: -1;
+    animation: incont 1s cubic-bezier(.1,.86,.72,.86) 1;
+}
+
+@keyframes incont{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+    
+
+body{
+    background-color: #a06ce4;  
 }
