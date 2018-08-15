@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
-.three-d-box ul {  /*调整ul标签的样式，取消内边距、外边距，和“点”样式*/
+.three-d-box ul {  
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
-.stage {  /*设置舞台元素在屏幕居中，设置合适的景深大小*/
+
+/*center stage FOV*/
+.stage {  
     margin: auto;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -16,20 +18,35 @@
     height: 200px;
     margin: 100px auto;
     perspective: 800px;
-    animation: instage 0.5s cubic-bezier(.1,.86,.72,.86) 1;
+    animation: instage 2s cubic-bezier(.22,.87,.33,1.22) 1;
 }
 
 @keyframes instage{
     0%{
-        top:-100%;
+        width: 20px;
+        height: 20px;
+        top:-90%;
+        opacity: 0;
+    }
+    50%{
+        top:10%;
+        opacity: 0.1;
+ background-color: #ffa43d;
+         width: 20px;
+        height: 20px;
+    }
+    70%{
+        opacity: 0.5;
     }
     100%{
-        top:0;
+         width: 200px;
+        height: 200px;
+        opacity: 1;
     }
 }
 
 
-@keyframes move { /*设置动画关键帧*/
+@keyframes move {
     0%{
         transform:  rotateY(0deg) rotateX(45deg) rotateZ(45deg) ;
     }
@@ -49,19 +66,21 @@
         background-color: #ffffff;
     }
 }
-.stage .three-d-box {  /*动画容器居中在舞台元素中间*/
-    width: 200px;
-    height: 200px;
+
+/*center*/
+.stage .three-d-box { 
+    width: 100px;
+    height: 100px;
     position: absolute;
     left: 50%;
     top: 50%;
     margin: -100px 0 0 -100px;
-    transform-style: preserve-3d; /*设置3D属性让子元素三维空间呈现*/
-    animation: move 10s linear infinite; /*设置动画*/
+    transform-style: preserve-3d; /*3d prop*/
+    animation: move 10s linear infinite; 
 /*    transform: rotateX(45deg) rotateZ(45deg)*/
 
 }
-.stage .three-d-box>li { /*设置动画子元素公共属性*/
+.stage .three-d-box>li { 
     position: absolute;
     list-style-type: none;
     width: 200px;
@@ -103,12 +122,13 @@
     opacity: 0.3;
     font-family: 'Open Sans Condensed', sans-serif;
     color: aqua;
+    animation-fill-mode: forwards;
     animation: textmove 1s cubic-bezier(.46,-0.02,.17,.84) 1;
-    animation-delay: 0.2s;
+    animation-delay: 1s;
 }
 
 
-/*为了保证我们对立方体位置的控制，我们需要让动画容器在立方体的中间位置*/
+/*center*/
 .stage .three-d-box>li:nth-child(1) { 
 /*    f*/
     background-color: #ffffff;

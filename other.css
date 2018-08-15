@@ -4,44 +4,45 @@
 .subcontain{
     position: absolute;
     top: 0px;
-    width: 200%;
-    height: 70%;
+    width: 100%;
+    height: 80%;
+    display: block;
     background-color: black;
-    transform: translate(-10%,0);
-    z-index: -1;
-    animation: incont 1.5s cubic-bezier(.1,.86,.72,.86) 1;
+    transform: translate(0%,-10%);
+    z-index: 0;
+    animation: incont 1s cubic-bezier(.22,.87,.33,1.22) 1;
 }
 
 @keyframes incont{
     0%{
-        opacity: 0;
+        top:-90%;
     }
     100%{
-        opacity: 1;
+        top:0%;
     }
 }
 
 
 body{
-    background-color: #a06ce4;
+    margin: 0 0; 
 }
 
 
 .menu a{
-    display:block;/*将a变成块状*/
-    width: 130px;/*设置块的宽度*/
-    height: 50px;/*设置块的长度*/
+    display:block;
+    width: 130px;
+    height: 50px;
     font-family: 'Open Sans Condensed', sans-serif;
-    line-height: 100%;/*设置字体在块中的高度*/
+    line-height: 100%;
     background-color: #666cdb;
-    margin: 0px 0px;/*块里的高宽通过margin设置*/
+    margin: 0px 0px;
     color: #ffffff;
-    text-align: center;/*字体居中*/
-    text-decoration: none;/*去掉下划线*/
+    text-align: center;
+    text-decoration: none;
     font-size: 30px;
 }
 .menu a:hover{
-    height: auto;
+    height: 50px;
     animation-fill-mode: forwards;
     background-color: #8a8dc1;
     animation: hoverin 5s cubic-bezier(.1,.86,.72,.86) 1; 
@@ -50,10 +51,12 @@ body{
 .menu li{
     list-style-type: none;
     float: left;
+    position: relative;
+    top: 130px;
     width: auto;
-    height: auto;
+    height: 50px;
     animation-fill-mode: forwards;
-    animation: menuin 1s cubic-bezier(.1,.86,.72,.86) 1; 
+    animation: menuin 1s cubic-bezier(.22,.87,.33,1.22) 1; 
 }
 
 @keyframes hoverin{
@@ -116,12 +119,14 @@ body{
 
 #menu{
     position: fixed;
+    text-align: center;
     float: left;
     top:0;
     left: 0;
     width: 100%;
-    height: auto;
+    height:200px;
     background-color: #666cdb;
+    transform: translate(0,-140px);
     animation: barin 1s cubic-bezier(.22,.87,.33,1.22) 1;  /*bounce*/
 }
 
@@ -134,3 +139,57 @@ body{
     }
     
 }
+
+
+#subtitle{
+    text-align: center;
+    position: relative;
+    top:70%;
+    left: 0;
+    font-size: 32px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+
+.animate {
+			display: inline-block;
+			padding: 0 5px;
+			vertical-align: 3px;
+			font-size: 20px;
+			font-weight: normal;
+		}
+		
+.animate.on {
+    animation: fade 1.5s infinite forwards;
+}
+		
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+#pages  { 
+    position: relative; 
+    overflow: hidden;
+    top:0;
+    width: 100%; 
+    max-width: 100%; 
+    height: 100%;
+    margin: 0 auto;
+}
+.page  { 
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+
