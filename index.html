@@ -13,7 +13,7 @@
     
 <!--    transition-->
     <script type=text/javascript>
-        let pw;
+    let pw;
     (window.onload=function () {
         pw=new pageSwitch('pages',{
             duration:800,               
@@ -72,7 +72,7 @@
             </div>
             <div class="subcontain">
             </div>
-            <h2 id="Subtitle"></h2>
+            <h2 id="Subtitle"></h2>   
             <script type="text/javascript">
             let textBox = $('#Subtitle');
             let index = 0;
@@ -81,9 +81,9 @@
             let len = str.length;
 
             function input() {
-                
+
                 textBox.html(str.substr(0, index) + '<span class="animate">|</span>');
-                
+
                 setTimeout(function() {
                     index++;
                     if(index === len + 1) {
@@ -95,15 +95,18 @@
 
                 }, Math.random() * 250)
 
-//                console.log(index);
+        //                console.log(index);
             }
-
-            input();
+    
+                input();
             </script>
-            
         </div>
-        <div class="page page2" style="background-color: #fb9f36;">
+        
+        
+        
+        <div id="workspage" class="page page2" style="background-color: #fb9f36;">
 <!--            works-->
+            <div ></div>
             <div id="Display1"><h3>A Soloar System</h3></div>
             <div id="videodiv">
                 <video src="VID/processing-movie.mp4" width="50%" controls="controls">
@@ -113,10 +116,27 @@
         </div>  
         <div class="page page3" style="background-color: #5874b5;">
 <!--            about me-->
+            <script type="text/javascript">
+                    function show(obj){
+                        var objDiv=$(".QR");
+                        $(objDiv).css("display","block"); 
+                        $("#num").css("display","inline"); 
+                    }
+                    function hide(obj){
+                        var objDiv=$(".QR");
+                        $(objDiv).css("display","none"); 
+                        $("#num").css("display","none"); 
+                 }
+            </script>
             <div id="namecard">    
                 <img id="avatar" src="image/head.jpeg">     
-                <div class="words"><h4>Name: Dooomino(Yudi Tao 陶雨迪)<br/>
-                                email: tyd19970811@gmail.com</h4></div>
+                <div class="words">
+                    <p>Name: Dooomino(Yudi Tao)<br/>
+                        Email: tyd19970811@gmail.com</p>
+                    <div class="QRd" onmouseover="show(this)" onmouseout="hide(this)"><a herf="#" style="font-size: 28px; font-weight: 600; color: #ff8966; background-color:#a9d2d5;width: 50%; border-radius: 20%;">QQ</a><p id="num">:&nbsp;1744807521</p>
+                    </div>
+                    <img class="QR" src="image/qr.jpg" style="width:20rem"/>
+                </div>
             </div>
         </div>  
         
