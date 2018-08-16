@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+#avatar{
+    position: absolute;
+    top:50%;     
+    left: 10%;
+    width: 20%;
+    border-radius: 50%;
+}
+#namecard{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.words{
+    position: relative;
+    top:10%;
+    left: 30%;
+}

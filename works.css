@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+#Display1{
+    position: relative;
+    top: 10%; 
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: cadetblue;
+    width: 50%;
+    height: 10%;
+    animation-fill-mode: forwards;
+    animation: moveind1 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
+}
+
+#Display1>h3{
+    position: relative;
+    top:30%;
+    font-size: 32;
+    text-align: center;
+    color: blanchedalmond;
+}
+
+#videodiv{
+    position: relative;
+    top: 10%;
+    animation: moveind1 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
+}
+
+
+
+@keyframes moveind1{
+    0%{
+        transform: translate(-100%,0);
+    }
+    100%{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}

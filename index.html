@@ -1,25 +1,21 @@
 <head><!DOCTYPE html>
-<!--     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
+     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="Cube.css"/>
     <link rel="stylesheet" type="text/css" href="other.css"/>
+    <link rel="stylesheet" type="text/css" href="aboutme.css"/>
+    <link rel="stylesheet" type="text/css" href="works.css"/>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type=text/javascript src="js/pageSwitch.js"></script>
-    <script type="text/javascript" src="js/realshadow.js"></script>
     <title>Dooomino's half floor</title>
 </head>
 <body>
-    <div id="menu" style="z-index: 998;">
-            <ul class="menu">
-                <li class="menu"><a class="menu" href="#">HOME</a></li>
-                <li class="menu"><a class="menu" id="WorksBtn" href="#">Works</a></li>
-                <li class="menu"><a class="menu" href="https://github.com/Dooomino" target="GIT">GitHub</a></li>
-                <li class="menu"><a class="menu" href="#">Contact Me</a></li>
-            </ul>
-        </div>
+<!--    scroll indicate-->
+    
 <!--    transition-->
     <script type=text/javascript>
+        let pw;
     (window.onload=function () {
-        var pw=new pageSwitch('pages',{
+        pw=new pageSwitch('pages',{
             duration:800,               
             direction:0,                
             start:0,                    
@@ -28,7 +24,7 @@
             transition:'slide',         
             freeze:false,               
             mouse:true,                 
-            mousewheel:false,            
+            mousewheel:true,            
             arrowkey:true,              
             autoplay:false              
         });
@@ -39,11 +35,30 @@
         pw.on('after',function(now,prev){  //now是切换后当前页面索引
             $(pages[now]).addClass('current');
         });
+        
     });
+    function switchtoH(){
+            pw.slide(0);
+    } 
+    function switchtoW(){
+            pw.slide(1);
+    }
+    function switchtoC(){
+            pw.slide(2);
+    }
     </script>
+    <div id="menu" style="z-index: 997;">
+        <ul class="menu">
+            <li class="menu"><a class="menu" href="#" onclick="switchtoH()">HOME</a></li>
+            <li class="menu"><a class="menu" id="WorksBtn" href="#" onclick="switchtoW()">Works</a></li>
+            <li class="menu"><a class="menu" href="https://github.com/Dooomino" target="GIT">GitHub</a></li>
+            <li class="menu"><a class="menu" href="#" onclick="switchtoC()">About Me</a></li>
+        </ul>
+    </div>
     <div id="pages" style="touch-action: pan-y;">
         
         <div class="page page1 current" style="background-color: #a06ce4;">
+<!--            cube-->
                 <div class="stage" style="z-index: 999;"> 
                 <ul class="three-d-box">  
                     <li class="sd"></li> 
@@ -88,16 +103,22 @@
             
         </div>
         <div class="page page2" style="background-color: #fb9f36;">
-          <button onclick=""><a href="index.html">Home</a></button>    
+<!--            works-->
+            <div id="Display1"><h3>A Soloar System</h3></div>
+            <div id="videodiv">
+                <video src="VID/processing-movie.mp4" width="50%" controls="controls">
+            您的浏览器不支持 video 标签。
+                </video>
+            </div>
+        </div>  
+        <div class="page page3" style="background-color: #5874b5;">
+<!--            about me-->
+            <div id="namecard">    
+                <img id="avatar" src="image/head.jpeg">     
+                <div class="words"><h4> d</h4></div>
+            </div>
         </div>  
         
     </div>
-<!--
-    <script type=text/javascript>
-            (function(){
-                realshadow(document.getElementsByClassName('sd'));
-            }
-            )();
-        </script>
--->
+   
 </body>
