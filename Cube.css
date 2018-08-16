@@ -115,9 +115,9 @@
 }
 
 #title{
-    position:absolute;
-    top: 150%;
-    left: 40%;
+    position:relative;
+    top: 100%;
+    left: 100%;
     font-size: 32;
     opacity: 0.3;
     font-family: 'Open Sans Condensed', sans-serif;
