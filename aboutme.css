@@ -11,7 +11,9 @@
 }
 
 .words{
-    position: relative;
-    top:10%;
-    left: 30%;
+    position: absolute;
+    color: wheat;
+    font-size: 32;
+    top:60%;
+    left: 40%;
 }
