@@ -74,29 +74,29 @@
             </div>
             <h2 id="Subtitle"></h2>   
             <script type="text/javascript">
-            let textBox = $('#Subtitle');
-            let index = 0;
-            let str = "A starter of Webdev and simple project maker. </br>";
+                let textBox = $('#Subtitle');
+                let index = 0;
+                let str = "A starter of Webdev and simple project maker. </br>";
 
-            let len = str.length;
+                let len = str.length;
 
-            function input() {
+                function input() {
 
-                textBox.html(str.substr(0, index) + '<span class="animate">|</span>');
+                    textBox.html(str.substr(0, index) + '<span class="animate">|</span>');
 
-                setTimeout(function() {
-                    index++;
-                    if(index === len + 1) {
-                        $('.animate').addClass('on');
-                        return;
+                    setTimeout(function() {
+                        index++;
+                        if(index === len + 1) {
+                            $('.animate').addClass('on');
+                            return;
                     }
 
                     input();
 
-                }, Math.random() * 250)
+                    }, Math.random() * 250)
 
-        //                console.log(index);
-            }
+            //                console.log(index);
+                }
     
                 input();
             </script>
@@ -132,14 +132,20 @@
                 <img id="avatar" src="image/head.jpeg">     
                 <div class="words">
                     <p>Name: Dooomino(Yudi Tao)<br/>
-                        Email: tyd19970811@gmail.com</p>
-                    <div class="QRd" onmouseover="show(this)" onmouseout="hide(this)"><a herf="#" style="font-size: 28px; font-weight: 600; color: #ff8966; background-color:#a9d2d5;width: 50%; border-radius: 20%;">QQ</a><p id="num">:&nbsp;1744807521</p>
+                       Email: tyd19970811@gmail.com</p>
+<!--
+                    <div class="QRd" onmouseover="show(this)" onmouseout="hide(this)"><a herf="#">QQ</a><p id="num">:&nbsp;1744807521</p>
                     </div>
+-->
                     <img class="QR" src="image/qr.jpg" style="width:20rem"/>
                 </div>
             </div>
-        </div>  
-        
+            <div id="breakerUnd"></div>
+            <div id="breaker">
+                <div></div>
+                <h2 id="more">More<br>Info</h2>
+            </div>  
+        </div>
     </div>
    
 </body>
