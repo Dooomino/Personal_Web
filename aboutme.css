@@ -166,6 +166,24 @@
     }
 }
 
+#breakerund>img{
+    position: absolute;
+    top: 50%;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+#breakerund>img:nth-child(1){
+    left: 30%;
+}
+#breakerund>img:nth-child(2){
+    left: 45%;
+}
+#breakerund>img:nth-child(3){
+    left: 60%;
+}
+
+
 #num{
     margin: 0 0;
     display: none;
