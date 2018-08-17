@@ -106,14 +106,35 @@
         
         <div id="workspage" class="page page2" style="background-color: #fb9f36;">
 <!--            works-->
-            <div ></div>
-            <div id="Display1"><h3>A Soloar System</h3></div>
-            <div id="videodiv">
-                <video src="VID/processing-movie.mp4" width="50%" controls="controls">
-            您的浏览器不支持 video 标签。
-                </video>
+            <div id="workcover">
+                <h1>Things Here, are what I did.</h1>
             </div>
+            <ul class="workframe">
+                <li id="display1">
+                    <div class="workcont">
+                        <h3 class="worktitle">A Soloar System</h3>
+                        <div id="videodiv">
+                            <video src="VID/processing-movie.mp4" width="100%" controls="controls">
+                        您的浏览器不支持 video 标签。
+                            </video>
+                        </div>
+                    </div>
+                </li>
+                <li id="display2">
+                    <div class="workcont">
+                        <h3 class="worktitle">Rune generator</h3>
+                        <div id="videodiv2">
+                            <video src="VID/rune-generator.mp4" width="100%" controls="controls">
+                        您的浏览器不支持 video 标签。
+                            </video>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>  
+        
+        
+        
         <div class="page page3" style="background-color: #5874b5;">
 <!--            about me-->
             <script type="text/javascript">
@@ -132,23 +153,33 @@
                 <img id="avatar" src="image/head.jpeg">     
                 <div class="words">
                     <p>Name: Dooomino(Yudi Tao)<br/>
-                       Email: tyd19970811@gmail.com</p>
+                        Email: <a class="email" href="mailto:tyd19970811@gmail.com">tyd19970811@gmail.com</a></p>
 <!--
-                    <div class="QRd" onmouseover="show(this)" onmouseout="hide(this)"><a herf="#">QQ</a><p id="num">:&nbsp;1744807521</p>
+                    <div class="QRd" onmouseover="show(this)" onmouseout="hide(this)"><a href="#">QQ</a><p id="num">:&nbsp;1744807521</p>
                     </div>
 -->
                     <img class="QR" src="image/qr.jpg" style="width:20rem"/>
                 </div>
             </div>
-            <div id="breakerUnd">
-                <img src="image/tw.jpg" herf="https://twitter.com/dooomino_donno"/>
-                <img src="image/pin.jpg" herf="https://www.pinterest.ca/yudomino"/>
-                <img src="image/Tumblr.png" herf="https://invisicat.tumblr.com/"/>
+            <div id="breakerUnd" onmouseover="showlogo(this)" onmouseout="hidelogo(this)">
+                <ul class="logos">
+                    <li class="logoli">
+                        <a id="#a1" href="https://twitter.com/dooomino_donno" target="_blank">
+                            <img class="logo" border="0" src="image/tw.jpg"/>
+                        </a>
+                    </li>
+                    <li class="logoli">
+                        <a id="#a2" href="https://www.pinterest.ca/yudomino" target="_blank">
+                            <img class="logo" src="image/pin.jpg"/>
+                        </a>
+                    </li>
+                    <li class="logoli">
+                        <a id="#a3" href="https://invisicat.tumblr.com/" target="_blank">
+                            <img class="logo"  src="image/Tumblr.png"/>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div id="breaker">
-                <div></div>
-                <h2 id="more">More<br>Info</h2>
-            </div>  
         </div>
     </div>
    

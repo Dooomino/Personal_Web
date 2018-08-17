@@ -81,17 +81,6 @@
     display: none;
     animation: QRin 0.5s cubic-bezier(0, 1.00, 0.65, 1.00) 1;
 }
-#breaker{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-    background-color: black;
-    animation: breakerin 1s cubic-bezier(0, 1.00, 0.65, 1.00) 1;
-    animation-fill-mode: forwards;
-} 
 #breakerUnd{
     position: absolute;
     top: 0;
@@ -114,75 +103,66 @@
 
     }
 }
-#breaker:hover{
-    animation: breakerH 0.5s cubic-bezier(0, 1.00, 0.65, 1.00) 1;
-    opacity: 0;
-}
-#breaker>h2{
-    text-align: center;
-    padding: 10px 10px;
-    margin: 0 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: black;
-    width: 20%;
-    height: 20%;
-    font-size: 48;
-    animation: moreinfoin 1s cubic-bezier(0, 1.00, 0.65, 1.00) 1;
-}
-#breaker>div{
-    border-radius: 50%;
-    background-color: white;
-    width: 20%;
-    height: 20%;
-    position: absolute;
-    top: 27rem;
-    left: 51%;
-    animation: moreinfoin 1s cubic-bezier(0, 1.00, 0.65, 1.00) 1;
+
+.logoli{
+    list-style: none;
+    position: relative;
+    margin: 10px 10px;
 }
 
-@keyframes moreinfoin{
+.logoli:hover{
+    animation: splogo 1s cubic-bezier(0, 2.00, 0.65, 1.00) 1;
+}
+
+@keyframes splogo{
     0%{
-        width: 60%;
-        height: 0;
-        opacity: 0;
-        transform: rotate(90deg)
+        transform: rotate(0deg);
     }
     100%{
-        width: 20%;
-        height: 20%;
-        opacity: 1;
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 
-@keyframes breakerH{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
 
-#breakerund>img{
-    position: absolute;
-    top: 50%;
-    width: 10%;
-    height: 10%;
+.logo{
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
-#breakerund>img:nth-child(1){
-    left: 30%;
-}
-#breakerund>img:nth-child(2){
-    left: 45%;
-}
-#breakerund>img:nth-child(3){
-    left: 60%;
+
+@keyframes inbrka{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
+.logos{
+    position: absolute;
+    top:30%;
+    z-index: 999;
+}
+
+.email{
+    text-decoration: none;
+    color: #50d0ff;
+}
+.email:hover{
+    color: #ff7f50;
+    animation: emailcolor 3s cubic-bezier(0, 2.00, 0.65, 1.00) 1;
+}
+
+@keyframes emailcolor{
+    0%{
+        color: #50d0ff;
+    }
+    100%{
+        color: #ff7f50;
+
+    }
+}
 
 #num{
     margin: 0 0;

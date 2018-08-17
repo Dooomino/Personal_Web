@@ -1,38 +1,102 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
-#Display1{
-    position: relative;
-    top: 10%; 
-    font-family: 'Open Sans Condensed', sans-serif;
-    background-color: cadetblue;
+#workcover{
+    position: absolute;
+    top: 0;
+    left: 70%;
     width: 50%;
-    height: 10%;
-    animation-fill-mode: forwards;
-    animation: moveind1 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
+    height: 100%;
+    background-color: black;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    animation: workcoverin 1s cubic-bezier(0.5, 1.00, 0.85, 1.0) 1;
 }
 
-#Display1>h3{
-    position: relative;
-    top:30%;
+#workcover>h1{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-weight: 600;   
+}
+
+@keyframes workcoverin{
+    0%{left: 200%;}
+    100%{left: 70%;}
+}
+
+.workframe{
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0 0;
+    padding: 0 0;
+    float: left;
     font-size: 32;
     text-align: center;
     color: blanchedalmond;
 }
 
-#videodiv{
-    position: relative;
-    top: 10%;
+.workframe>li{
+    list-style: none;
+    margin: 0 0;
+}
+
+#display1{
+    position: absolute;
+    top: 20%; 
+    background-color: cadetblue;
+    width: 20%;
+    height: 10%;
+    animation-fill-mode: forwards;
     animation: moveind1 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
 }
 
+.worktitle{
+    position: absolute;
+    bottom:0;
+    left: 5%;
+}
+
+#videodiv{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    animation: moveind1 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
+}
+
+#videodiv2{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    animation: moveind1 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
+}
+
+#display1:hover{
+    animation: scalevideo 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
+    animation-fill-mode: forwards;
+}
+#display2:hover{
+    animation: scalevideo 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scalevideo{
+    0%{width: 20%;z-index: 0;}
+    100%{width:50%;z-index: 999;}
+}
 
 
 @keyframes moveind1{
-    0%{
-        transform: translate(-100%,0);
-    }
-    100%{
-        transform: translate(0,0);
-        opacity: 1;
-    }
+    0%{transform: translate(-100%,0);opacity: 0;}
+    100%{transform: translate(0,0);opacity: 1;}
 }
+
+
+#display2{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    background-color: #78c8ca;
+    width: 20%;
+    height: 10%;
+    animation: moveind1 1s cubic-bezier(0.07, 0.95, 0.79, 0.93) 1;
+}
+
