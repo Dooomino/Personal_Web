@@ -11,16 +11,16 @@
         var wait=setInterval(ready,1);
         document.onreadystatechange = wait;
         function ready(){
+            if(!$("#loading").is(":animated")){
+                    clearInterval(wait);
+                    console.log("!");
+                    $("#loading").css("opacity","0");
+                    $("#whole").css("display","block");
+                    $("#loading").css("display","none");
+                }
             if(document.readyState == "complete"){
                 $("#processbar").css("width","60%");
                 $("#loading").css("animation-play-state","running");
-                 if(!$("#loading").is(":animated")){
-                        clearInterval(wait);
-                        $("#loading").css("opacity","0");
-                        console.log("!");
-                        $("#whole").css("display","block");
-                        $("#loading").css("display","none");
-                    }
             }
         }
     </script>
