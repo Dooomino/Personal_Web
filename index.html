@@ -7,8 +7,22 @@
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type=text/javascript src="js/pageSwitch.js"></script>
     <title>Dooomino's half floor</title>
+    <script type=text/javascript>
+        document.onreadystatechange = ready;
+        function ready(){
+            if(document.readyState == "complete"){
+                alert("Done.");
+                $("#whole").css("display","block");
+            }
+        }
+    </script>
+
+
 </head>
 <body>
+    <div id="whole">
+
+
 <!--    scroll indicate-->
     
 <!--    transition-->
@@ -36,37 +50,37 @@
             $(pages[now]).addClass('current');
         });
         
-    });
-    function switchtoH(){
-            pw.slide(0);
-    } 
-    function switchtoW(){
-            pw.slide(1);
-    }
-    function switchtoC(){
-            pw.slide(2);
-    }
-    </script>
-    <div id="menu" style="z-index: 997;">
-        <ul class="menu">
-            <li class="menu"><a class="menu" href="#" onclick="switchtoH()">HOME</a></li>
-            <li class="menu"><a class="menu" id="WorksBtn" href="#" onclick="switchtoW()">Works</a></li>
-            <li class="menu"><a class="menu" href="https://github.com/Dooomino" target="GIT">GitHub</a></li>
-            <li class="menu"><a class="menu" href="#" onclick="switchtoC()">About Me</a></li>
-        </ul>
-    </div>
-    <div id="pages" style="touch-action: pan-y;">
-        
-        <div class="page page1 current" style="background-color: #a06ce4;">
-<!--            cube-->
-                <div class="stage" style="z-index: 999;"> 
-                <ul class="three-d-box">  
-                    <li class="sd"></li> 
-                    <li class="sd"></li>
-                    <li class="sd"></li>
-                    <li class="sd"></li>
-                    <li class="sd"></li>
-                    <li class="sd"></li>
+        });
+        function switchtoH(){
+                pw.slide(0);
+        }
+        function switchtoC(){
+                pw.slide(1);
+        }
+        function switchtoW(){
+                pw.slide(2);
+        }
+        </script>
+        <div id="menu" style="z-index: 997;">
+            <ul class="menu">
+                <li class="menu"><a class="menu" href="#" onclick="switchtoH()">HOME</a></li>
+                <li class="menu"><a class="menu" href="#" onclick="switchtoC()">Me</a></li>
+                <li class="menu"><a class="menu" id="WorksBtn" href="#" onclick="switchtoW()">Works</a></li>
+                <li class="menu"><a class="menu" href="https://github.com/Dooomino" target="GIT">GitHub</a></li>
+            </ul>
+        </div>
+        <div id="pages" style="touch-action: pan-y;">
+
+            <div class="page page1 current" style="background-color: #a06ce4;">
+    <!--            cube-->
+                    <div class="stage" style="z-index: 999;">
+                    <ul class="three-d-box">
+                        <li class="sd"></li>
+                        <li class="sd"></li>
+                        <li class="sd"></li>
+                        <li class="sd"></li>
+                        <li class="sd"></li>
+                        <li class="sd"></li>
                 </ul>
                 <p id="title">Dooomino.</p>
             </div>
@@ -102,40 +116,7 @@
             </script>
         </div>
         
-        
-        
-        <div id="workspage" class="page page2" style="background-color: #fb9f36;">
-<!--            works-->
-            <div id="workcover">
-                <h1>Things Here, are what I did.</h1>
-            </div>
-            <ul class="workframe">
-                <li id="display1">
-                    <div class="workcont">
-                        <h3 class="worktitle">A Soloar System</h3>
-                        <div id="videodiv">
-                            <video src="VID/processing-movie.mp4" width="100%" controls="controls">
-                        您的浏览器不支持 video 标签。
-                            </video>
-                        </div>
-                    </div>
-                </li>
-                <li id="display2">
-                    <div class="workcont">
-                        <h3 class="worktitle">Rune generator</h3>
-                        <div id="videodiv2">
-                            <video src="VID/rune-generator.mp4" width="100%" controls="controls">
-                        您的浏览器不支持 video 标签。
-                            </video>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>  
-        
-        
-        
-        <div class="page page3" style="background-color: #5874b5;">
+        <div class="page page2" style="background-color: #5874b5;">
 <!--            about me-->
             <script type="text/javascript">
                     function show(obj){
@@ -149,7 +130,7 @@
                         $("#num").css("display","none"); 
                  }
             </script>
-            <div id="namecard">    
+            <div id="namecard" style="z-index:999;">
                 <img id="avatar" src="image/head.jpeg">     
                 <div class="words">
                     <p>Name: Dooomino(Yudi Tao)<br/>
@@ -181,6 +162,90 @@
                 </ul>
             </div>
         </div>
+
+        <div id="workspage" class="page page3" style="background-color: #fb9f36;">
+<!--            works-->
+<!--
+            <script type="text/javascript">
+                let pw2;
+                (window.onload=function () {
+                    pw2=new pageSwitch('worksconts',{
+                        duration:800,
+                        direction:1,
+                        start:0,
+                        loop:false,
+                        ease:'ease',
+                        transition:'slide',
+                        freeze:false,
+                        mouse:false,
+                        mousewheel:false,
+                        arrowkey:false,
+                        autoplay:false
+                    });
+    //                    pages=pw2.pages;
+    //                    pw2.on('before',function(now,prev){  //now是切换前当前页面索引
+    //                        $(pages[now]).removeClass('current');
+    //                    });
+    //                    pw2.on('after',function(now,prev){  //now是切换后当前页面索引
+    //                        $(pages[now]).addClass('current');
+    //                    });
+
+                });
+            </script>
+
+-->
+            <div id="workcover">
+                <h1>Things Here, are what I did.</h1>
+            </div>
+            <div id="worksconts">
+                <div class="workscon workspage1">
+<!--
+                    <div class="lastBut">
+                    </div>
+-->
+                    <ul class="workframe">
+                        <li id="display1">
+                            <div class="workcont">
+                                <h3 class="worktitle">A Soloar System</h3>
+                                <div id="videodiv">
+                                    <video src="VID/processing-movie.mp4" width="100%" controls="controls">
+                                您的浏览器不支持 video 标签。
+                                    </video>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="display2">
+                            <div class="workcont">
+                                <h3 class="worktitle">Rune generator</h3>
+                                <div id="videodiv2">
+                                    <video src="VID/rune-generator.mp4" width="100%" controls="controls">
+                                您的浏览器不支持 video 标签。
+                                    </video>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="nextBut">
+                        <div class="upPart"></div>
+                        <div class="lowPart"></div>
+                    </div>
+                </div>
+
+                <div class="workscon workspage2"></div>
+            </div>
+
+
+
+        </div>
+
+
+
+
     </div>
-   
+
+
+
+
+</div>
 </body>

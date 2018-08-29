@@ -1,5 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
+.worksconts{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+}
+
+.nextBut{
+    position: absolute;
+    top:80%;
+    left: 40%;
+    height: 60px;
+    width: 40px;
+    transform: rotate(180deg);
+/*    background-color: #78c8ca;*/
+}
+.nextBut .lowPart{
+    position: absolute;
+    top:0;
+    left: 0%;
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 50px solid  #f4ee38;
+}
+.nextBut .upPart{
+    position: absolute;
+    top: -15%;
+    left: -10%;
+    background-color: #f4ee38;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10 0;
+    animation: dragup 0.5s cubic-bezier(0.5, 1.00, 0.85, 1.0) 1;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.nextBut .upPart:hover{
+    top: 40%;
+    left: -10%;
+}
+
+@keyframes dragup{
+    0%{top: -15%;}
+    50%{top: 40%;}
+    100%{top: -15%;}
+}
+
 #workcover{
     position: absolute;
     top: 0;
@@ -11,6 +63,9 @@
     color: white;
     animation: workcoverin 1s cubic-bezier(0.5, 1.00, 0.85, 1.0) 1;
 }
+
+
+
 
 #workcover>h1{
     position: absolute;
