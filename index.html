@@ -13,10 +13,10 @@
         function ready(){
             if(document.readyState == "complete"){
                 $("#processbar").css("width","60%");
-                $("#loading").css("opacity","0");
                 $("#loading").css("animation-play-state","running");
                  if(!$("#loading").is(":animated")){
                         clearInterval(wait);
+                        $("#loading").css("opacity","0");
                         console.log("!");
                         $("#whole").css("display","block");
                         $("#loading").css("display","none");
