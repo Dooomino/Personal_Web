@@ -8,11 +8,19 @@
     <script type=text/javascript src="js/pageSwitch.js"></script>
     <title>Dooomino's half floor</title>
     <script type=text/javascript>
-        document.onreadystatechange = ready;
+        var wait=setInterval(ready,1);
+        document.onreadystatechange = wait;
         function ready(){
+             if(!$("#loading").is(":animated")){
+                    clearInterval(wait);
+                    console.log("!");
+                    $("#whole").css("display","block");
+                    $("#loading").css("display","none");
+                }
             if(document.readyState == "complete"){
-                alert("Done.");
-                $("#whole").css("display","block");
+                $("#processbar").css("width","60%");
+                $("#loading").css("opacity","0");
+                $("#loading").css("animation-play-state","running");
             }
         }
     </script>
@@ -20,6 +28,12 @@
 
 </head>
 <body>
+    <div id="loading" class="loadingout">
+        <div id="processbarUn"></div>
+        <div id="processbar"></div>
+    </div>
+
+
     <div id="whole">
 
 
