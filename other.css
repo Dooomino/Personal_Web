@@ -3,8 +3,7 @@
 #whole{
     display: none;
     position: absolute;
-    background-color: transparent;
-    z-index: 99999;
+    z-index: 99998;
     width: 100%;
     height: 100%;
 }
@@ -12,6 +11,7 @@
 #loading{
     position: absolute;
     background-color: #7f7f7f;
+    opacity: 0.5;
     z-index: 99999;
     width: 100%;
     height: 100%;
@@ -19,10 +19,10 @@
 .loadingout{
 /*    opacity:0;*/
     animation-play-state: paused;
-    animation: loadingouta 1s cubic-bezier(.22,.87,.33,1.22) 1;
+    animation: loadingoutA 1s cubic-bezier(.22,.87,.33,1.22) 1;
 }
 
-@keyframes loadingouta{
+@keyframes loadingoutA{
     0%{opacity: 1;}
     100%{opacity: 0;}
 }
@@ -33,9 +33,9 @@
     left: 20%;
     background-color: #8fefad;
     z-index: 99999;
-    width: 59%;
+    width: 60%;
     height: 2%;
-    animation: inprocess 3s cubic-bezier(.79, .47, .91, 1.07) 1;
+    animation: inprocess 3s cubic-bezier(.79, .47, .91, 1.0) 1;
 }
 #processbarUn{
     position: absolute;
@@ -49,7 +49,7 @@
 
 @keyframes inprocess{
     0%{width:0%}
-    100%{width:59%}
+    100%{width:60%}
 }
 
 

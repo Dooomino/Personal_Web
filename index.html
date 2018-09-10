@@ -8,27 +8,19 @@
     <script type=text/javascript src="js/pageSwitch.js"></script>
     <title>Dooomino's half floor</title>
     <script type=text/javascript>
-        var wait=setInterval(ready,1);
-        document.onreadystatechange = wait;
-        function ready(){
-            if(!$("#loading").is(":animated")){
-                    clearInterval(wait);
-                    console.log("!");
-                    $("#loading").css("opacity","0");
-                    $("#whole").css("display","block");
-                    $("#loading").css("display","none");
-                }
-            if(document.readyState == "complete"){
-                $("#processbar").css("width","60%");
-                $("#loading").css("animation-play-state","running");
-            }
-        }
+        $(document).ready(
+        function(){
+            setTimeout(function(){
+                $("#loading").css("display","none");
+            $("#whole").css("display","block");},50);
+
+        });
     </script>
 
 
 </head>
 <body>
-    <div id="loading" class="loadingout">
+    <div id="loading">
         <div id="processbarUn"></div>
         <div id="processbar"></div>
     </div>
@@ -38,7 +30,7 @@
 
 
 <!--    scroll indicate-->
-    
+
 <!--    transition-->
     <script type=text/javascript>
     let pw;
