@@ -62,29 +62,23 @@ function run(dur){
                 duration: dur,
                 easing:"easeOutSine"
             });
-
-        times.add({
-            targets:"#title",
-            translateY:-30*count-60,
-            duration:1,
-            easing:"easeOutSine"
-        });
       times.add({
                 targets:"#title .change",
                 opacity:1,
-                duration: dur,
+                translateY:-10*count,
+                duration: dur/2 ,
                 easing:"easeOutSine"
             });
+    menuin();
      
     times.add({
                 targets:"#skip",
                 opacity:0,
                 translateY:-1000,
-                duration: dur,
+                duration: dur/2,
                 easing:"easeOutSine"
             });
-     
-    menuin();
+
     
     
 
