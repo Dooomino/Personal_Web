@@ -1,253 +1,33 @@
-<head><!DOCTYPE html>
-     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="Cube.css"/>
-    <link rel="stylesheet" type="text/css" href="other.css"/>
-    <link rel="stylesheet" type="text/css" href="aboutme.css"/>
-    <link rel="stylesheet" type="text/css" href="works.css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type=text/javascript src="js/pageSwitch.js"></script>
-    <title>Dooomino's half floor</title>
-    <script type=text/javascript>
-        $(document).ready(
-        function(){
-            setTimeout(function(){
-                var alapha=1;
-                for(var i=0;i<10;i++){
-                    alapha-=0.1;
-                    setTimeout(function(){},100);
-                    console.log(alapha);
-                    $("#loading").css("opacity",alapha);
-                } 
-                $("#loading").css("display","none");
-            $("#whole").css("display","block");},50);
-        });
-    </script>
-
-
-</head>
-<body>
-    <div id="loading">
-        <div id="processbarUn"></div>
-        <div id="processbar"></div>
-    </div>
-
-
-    <div id="whole">
-
-
-<!--    scroll indicate-->
-
-<!--    transition-->
-    <script type=text/javascript>
-    let pw;
-    (window.onload=function () {
-        pw=new pageSwitch('pages',{
-            duration:800,               
-            direction:0,                
-            start:0,                    
-            loop:false,                 
-            ease:'ease',                
-            transition:'slide',         
-            freeze:false,               
-            mouse:true,                 
-            mousewheel:true,            
-            arrowkey:true,              
-            autoplay:false              
-        });
-        pages=pw.pages; 
-        pw.on('before',function(now,prev){  //now是切换前当前页面索引
-            $(pages[now]).removeClass('current');  
-        }); 
-        pw.on('after',function(now,prev){  //now是切换后当前页面索引
-            $(pages[now]).addClass('current');
-        });
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <script type="text/javascript" src="anime.min.js"></script>
+    </head>
+    <body>
+         
+        <script type="text/javascript" src="moving.js"></script>
         
-        });
-        function switchtoH(){
-                pw.slide(0);
-        }
-        function switchtoC(){
-                pw.slide(1);
-        }
-        function switchtoW(){
-                pw.slide(2);
-        }
-        </script>
-        <div id="menu" style="z-index: 997;">
-            <ul class="menu">
-                <li class="menu"><a class="menu" href="#" onclick="switchtoH()">HOME</a></li>
-                <li class="menu"><a class="menu" href="#" onclick="switchtoC()">Me</a></li>
-                <li class="menu"><a class="menu" id="WorksBtn" href="#" onclick="switchtoW()">Works</a></li>
-                <li class="menu"><a class="menu" href="https://github.com/Dooomino" target="GIT">GitHub</a></li>
+        
+        <div id="skip" style="color: white;opacity: 0;line-height: 20px; width: 50px;height: 20px"><a href="#" onclick="done()">Skip</a></div>
+<!--        <div id="test"></div>-->
+    <div id="Home">
+        <div id="title">
+            <div class="text text1 el">Hi</div>            
+            <div class="text text2 el">You are here</div>            
+            <div class="text text3 el">I'm...</div>            
+            <div class="text text4 el">Hard to say...</div>            
+            <div class="text text5 el">ehmm..</div>            
+            <div class="text text6 el">You can call me..</div>            
+            <div class="text text7 el">Dooomino</div>            
+        </div>
+       
+        <div>
+            <ul id="menus">
+                <li class="menu1 menu"><a href="#">Works</a></li>
+                <li class="menu2 menu"><a href="#">Me</a></li>
+                <li class="menu3 menu"><a href="https://github.com/Dooomino" target="_blank">GitHub</a></li>
             </ul>
         </div>
-        <div id="pages" style="touch-action: pan-y;">
-
-            <div class="page page1 current" style="background-color: #a06ce4;">
-    <!--            cube-->
-                    <div class="stage" style="z-index: 999;">
-                    <ul class="three-d-box">
-                        <li class="sd"></li>
-                        <li class="sd"></li>
-                        <li class="sd"></li>
-                        <li class="sd"></li>
-                        <li class="sd"></li>
-                        <li class="sd"></li>
-                </ul>
-                <p id="title">Dooomino.</p>
-            </div>
-            <div class="subcontain">
-            </div>
-            <h2 id="Subtitle"></h2>   
-            <script type="text/javascript">
-                let textBox = $('#Subtitle');
-                let index = 0;
-                let str = "A starter of Webdev and simple project maker. </br>";
-
-                let len = str.length;
-
-                function input() {
-
-                    textBox.html(str.substr(0, index) + '<span class="animate">|</span>');
-
-                    setTimeout(function() {
-                        index++;
-                        if(index === len + 1) {
-                            $('.animate').addClass('on');
-                            return;
-                    }
-
-                    input();
-
-                    }, Math.random() * 250)
-
-            //                console.log(index);
-                }
-    
-                input();
-            </script>
-        </div>
-        
-        <div class="page page2" style="background-color: #5874b5;">
-<!--            about me-->
-            <script type="text/javascript">
-                    function show(obj){
-                        var objDiv=$(".QR");
-                        $(objDiv).css("display","block"); 
-                        $("#num").css("display","inline"); 
-                    }
-                    function hide(obj){
-                        var objDiv=$(".QR");
-                        $(objDiv).css("display","none"); 
-                        $("#num").css("display","none"); 
-                 }
-            </script>
-            <div id="namecard" style="z-index:999;">
-                <img id="avatar" src="image/head.jpeg">     
-                <div class="words">
-                    <p>Name: Dooomino(Yudi Tao)<br/>
-                        Email: <a class="email" href="mailto:tyd19970811@gmail.com">tyd19970811@gmail.com</a></p>
-<!--
-                    <div class="QRd" onmouseover="show(this)" onmouseout="hide(this)"><a href="#">QQ</a><p id="num">:&nbsp;1744807521</p>
-                    </div>
--->
-                    <img class="QR" src="image/qr.jpg" style="width:20rem"/>
-                </div>
-            </div>
-            <div id="breakerUnd" onmouseover="showlogo(this)" onmouseout="hidelogo(this)">
-                <ul class="logos">
-                    <li class="logoli">
-                        <a id="#a1" href="https://twitter.com/dooomino_donno" target="_blank">
-                            <img class="logo" border="0" src="image/tw.jpg"/>
-                        </a>
-                    </li>
-                    <li class="logoli">
-                        <a id="#a2" href="https://www.pinterest.ca/yudomino" target="_blank">
-                            <img class="logo" src="image/pin.jpg"/>
-                        </a>
-                    </li>
-                    <li class="logoli">
-                        <a id="#a3" href="https://invisicat.tumblr.com/" target="_blank">
-                            <img class="logo"  src="image/Tumblr.png"/>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="workspage" class="page page3" style="background-color: #fb9f36;">
-<!--            works-->
-<!--
-            <script type="text/javascript">
-                let pw2;
-                (window.onload=function () {
-                    pw2=new pageSwitch('worksconts',{
-                        duration:800,
-                        direction:1,
-                        start:0,
-                        loop:false,
-                        ease:'ease',
-                        transition:'slide',
-                        freeze:false,
-                        mouse:false,
-                        mousewheel:false,
-                        arrowkey:false,
-                        autoplay:false
-                    });
-    //                    pages=pw2.pages;
-    //                    pw2.on('before',function(now,prev){  //now
-    //                        $(pages[now]).removeClass('current');
-    //                    });
-    //                    pw2.on('after',function(now,prev){  //now
-    //                        $(pages[now]).addClass('current');
-    //                    });
-
-                });
-            </script>
-
--->
-            <div id="workcover">
-                <h1>Things Here, are what I did.</h1>
-            </div>
-            <div id="worksconts">
-                <div class="workscon workspage1">
-<!--
-                    <div class="lastBut">
-                    </div>
--->
-                    <ul class="workframe">
-                        <li id="display1">
-                            <div class="workcont">
-                                <h3 class="worktitle">A Soloar System</h3>
-                                <div id="videodiv">
-                                    <video src="VID/processing-movie.mp4" width="100%" controls="controls">
-                                    </video>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="display2">
-                            <div class="workcont">
-                                <h3 class="worktitle">Rune generator</h3>
-                                <div id="videodiv2">
-                                    <video src="VID/rune-generator.mp4" width="100%" controls="controls">
-                                    </video>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="nextBut">
-                        <div class="upPart"></div>
-                        <div class="lowPart"></div>
-                    </div>
-                </div>
-
-                <div class="workscon workspage2"></div>
-            </div>
-
-        </div>
-
     </div>
-
-</div>
-</body>
+    </body>
+</html>
