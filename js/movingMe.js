@@ -36,6 +36,29 @@ function run(dur){
 } 
 
 
+function gotoHome(){
+    times.pause();
+    times = new anime.timeline();
+    times.add({
+        targets: "#Me",
+        opacity: 0,
+        duration: 1000,
+        easing: smooth
+    });
+    times.add({
+        targets: "body",
+        backgroundColor: 'rgb(0,0,0)',
+        duration: 1000,
+        easing: smooth
+    });
+    setTimeout(function(){
+        if(times.finished){
+            window.location.href = "index.html";
+        }
+       },2000);
+}
+
+
 
 window.onload = function(){
     times=new anime.timeline();
