@@ -10,12 +10,20 @@ function run(dur){
     
     times.add({
         targets:"body",
-        backgroundColor: 'rgb(100, 150, 130)',
+        backgroundColor: 'rgb(255, 255, 255)',
+        duration:dur,
         easing: "easeOutSine"
     });
     times.add({
-        targets:"#leftCover",
+        targets:"#Topbar",
         width: '100%',
+        backgroundColor: 'rgb(255, 255, 255)',
+        duration:dur,
+        easing: smooth
+    });
+    times.add({
+        targets:".text2",
+        opacity: 1,
         duration:dur,
         easing: smooth
     });

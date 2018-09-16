@@ -34,9 +34,9 @@ a{
 
 .text{
     position: absolute;
-    color: white;
-    text-shadow: 2px 2px black;
-    font-weight: 400;
+    color: black;
+    text-shadow: 2px 2px white;
+    font-weight: 600;
     font-size: 32;
 }
 
@@ -50,6 +50,7 @@ a{
 }
 .text2{
     text-align: center;
+    opacity: 0;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -85,13 +86,13 @@ a{
     left: 10%;
     width: 50%;
     height: auto;
-    color: white;
+    color: black;
 }
 
 .leftinfo{
     position: absolute;
     list-style: none;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px white;
     font-weight: 400;
     font-size: 32;
     float: left;
