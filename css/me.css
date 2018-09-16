@@ -54,6 +54,9 @@ a{
     border-radius: 50%;
     width: 60px;
     height: 60px;
+    border-style: outset;
+    border-width: thick;
+    border-color: black;
 }
 
 
