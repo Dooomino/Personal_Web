@@ -26,7 +26,7 @@ function run(dur){
         if(i==2){
             times.add({
                 targets:"#skip",
-                opacity:0.8,
+                opacity:0.5,
                 duration: dur,
                 easing:"easeOutSine"
             });

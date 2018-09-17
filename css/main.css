@@ -11,6 +11,9 @@ a{
     color: inherit;
 }
 
+#skip{
+    opacity: 0.3;
+}
 #leftCover{
     position: absolute;
     top:70%;
