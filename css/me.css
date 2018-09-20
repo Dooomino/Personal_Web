@@ -3,6 +3,7 @@
 body{
     font-family: 'Open Sans',sans-serif; 
     background-color: black;
+    text-shadow: 2px 2px rgba(150, 150, 150, 50);
 }
 
 a{
@@ -35,7 +36,6 @@ a{
 .text{
     position: absolute;
     color: black;
-    text-shadow: 2px 2px white;
     font-weight: 600;
     font-size: 32;
 }
@@ -87,12 +87,15 @@ a{
     width: 50%;
     height: auto;
     color: black;
+    border-color: black;
+    border-style: outset;
+    border-width: 2px;
 }
 
 .leftinfo{
     position: absolute;
     list-style: none;
-    text-shadow: 2px 2px white;
+
     font-weight: 400;
     font-size: 32;
     float: left;

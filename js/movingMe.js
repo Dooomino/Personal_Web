@@ -66,8 +66,6 @@ function gotoHome(){
        },2000);
 }
 
-
-
 window.onload = function(){
     times=new anime.timeline();
     run(1000);

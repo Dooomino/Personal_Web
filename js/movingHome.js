@@ -97,6 +97,22 @@ function done(){
 }
 
 
+function gotoWork(){
+    times.pause();
+    times = new anime.timeline();
+    times.add({
+        targets:"#Home",
+        opacity:0,
+        duration:1000,
+        easing:"easeOutSine"
+    });
+    setTimeout(function(){
+        if(times.finished){
+            console.log("done");
+            window.location.href="works.html";
+        }
+    },1000);
+}
 function gotoMe(){
     times.pause();
     times = new anime.timeline();
