@@ -86,6 +86,13 @@ function run(dur){
 
  window.onload=function(){
      run(1000);    
+     var isdone=false;
+     document.addEventListener("keydown",function(event){
+         if (!isdone){
+            done();
+            isdone=true;
+         }
+     })
 }
  
  
