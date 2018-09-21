@@ -20,6 +20,9 @@ $(document).ready(function(){
     }
 });
 
+
+
+
 function run(dur){
      times.add({
         targets: "body",
@@ -64,14 +67,8 @@ function expandLeft(){
             easing: smooth
         });
         moving.add({
-            targets: "#container",
-            left: ["5%","30%"],
-            duration: 250,
-            easing: smooth
-        })
-        moving.add({
-            targets: "#leftBar",
-            left: ["-25%","0%"],
+            targets: "#leftBar,#container",
+            left: {value: "+=190"},
             duration: 500,
             easing: smooth
         });
@@ -84,22 +81,16 @@ function expandLeft(){
             easing: smooth
         });
         moving.add({
-            targets: "#leftBar",
-            left: ["0%","-25%"],
+            targets: "#leftBar,#container",
+            left:{ value: "-=190"},
             duration: 500,
             easing: smooth
             });
-        moving.add({
-            targets: "#container",
-            left: ["30%","5%"],
-            duration: 250,
-            easing: smooth
-        });
     }
 }
 
 function moveto(el){
-    var id = "#"+$(el).text();
+    var id = $(el).attr('href');
     $('html,body').stop().animate({scrollTop: $(id).offset().top},1000);
 
 }
