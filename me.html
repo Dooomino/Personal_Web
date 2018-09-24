@@ -3,6 +3,7 @@
         <link rel="stylesheet" type="text/css" href="css/me.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <script type="text/javascript" src="js/anime.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
         <Title>Dooomino</Title>
     </head>
     <body>
@@ -13,15 +14,22 @@
                     <div class="text text1">ME</div>
                     <div><a class="text text2" href="#" onclick="gotoHome()"><i class="fas fa-arrow-left"></i>Home</a></div>
                 </div>
-                <div class="namecard">
+                <div id="info">
                     <img id="avatar" src="image/head.jpeg"/>
-                    <div id="info">
-                        <ul class="leftinfo">
-                            <li>E-Mail:&nbsp;<a href="MailTo:">yudi.tao@hotmail.com</a></li>
-                            <li>Linkin:&nbsp;<a href="https://www.linkedin.com/in/yudi-tao-862561113/" target="_blank">Yudi Tao</a></li>
-                        </ul>
-                    </div>
+                    <ul class="leftinfo">
+                        <li>E-Mail:&nbsp;<a href="MailTo:">yudi.tao@hotmail.com</a></li>
+                        <li>Linkin:&nbsp;<a href="https://www.linkedin.com/in/yudi-tao-862561113/" target="_blank">Yudi Tao</a></li>
+                    </ul>
+                    <p id="contact">CONTACT</p>
                 </div>
+                <div id="Timeline">
+                    <div class="times time1"></div>
+                    <div class="times time2"></div>
+                    <div class="times time3"></div>
+                    <div class="times time4"></div>
+                </div>
+
+
             </div>
         </div>
     </body>

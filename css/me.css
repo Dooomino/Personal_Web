@@ -13,6 +13,7 @@ a{
 
 #Topbar{
     position: fixed;
+    z-index: 1000;
     width: 100%;
     height: 10%;
     transform: translate(0,-20%);
@@ -21,6 +22,20 @@ a{
     margin: 0;
     padding: 0;
 }
+
+#Timeline{
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+.times{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 #Me{
     position: absolute;
@@ -60,7 +75,7 @@ a{
 #MeContain{
     position: absolute;
     width: 100%;
-    height: 70%;
+    height: 100%;
 }
 
 
@@ -81,21 +96,36 @@ a{
 
 #info{
     position: absolute;
+    z-index: 999;
     opacity: 0;
     top: 20%;
-    left: 10%;
+    left: -45%;
+    float: left;
     width: 50%;
-    height: auto;
-    color: black;
-    border-color: black;
-    border-style: outset;
-    border-width: 2px;
+    height: 50%;
+    color: white;
+    background-color: black;
+    animation: swipeininfo 0.5s cubic-bezier(.43, .59, .72, 1.00) 1;
+}
+
+#info:hover{
+    left: 0%;
+    animation: swipeoutinfo 0.5s cubic-bezier(.43, .59, .72, 1.00) 1;
+}
+
+@keyframes swipeoutinfo{
+    from{left: -45%;}
+    to{left: 0%;}
+}
+@keyframes swipeininfo{
+    from{left: 0%;}
+    to{left: -45%;}
 }
 
 .leftinfo{
     position: absolute;
+    top: 30%;
     list-style: none;
-
     font-weight: 400;
     font-size: 32;
     float: left;
@@ -104,4 +134,21 @@ a{
     height: auto;
     margin: 10;
     padding:10;
+}
+
+
+#contact{
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    left: 90%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    word-spacing: 0;
+    font-size: 22;
+    word-wrap: break-word;
+    writing-mode: vertical-lr;
+    background-color: orangered;
+    text-orientation: upright;
 }

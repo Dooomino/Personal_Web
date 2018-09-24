@@ -1,5 +1,12 @@
 var smooth =[.50, 0.5, .71, 1]
 
+var colors=["rgb(255 204 92 )",
+            "rgb(255 238 173)",
+            "rgb(150 206 180)",
+            "rgb(136 216 176)",
+            "rgb(255 111 105)"
+           ];
+
 function run(dur){
      times.add({
          targets:"#Me",
@@ -69,4 +76,10 @@ function gotoHome(){
 window.onload = function(){
     times=new anime.timeline();
     run(1000);
+
+    var divs=document.querySelectorAll("#Timeline .times"),i;
+    for(i=0;i<divs.length;i++){
+        var c=i%colors.length;
+        $(divs[i]).css("backgroundColor",colors[c]);
+    }
 }
