@@ -26,7 +26,7 @@ $(document).ready(function(){
 function run(dur){
      times.add({
         targets: "body",
-        backgroundColor: "rgb(255, 180, 100)",
+        backgroundColor: "rgb(137, 212, 245)",
         duration:dur,
         delay:1000,
         easing: smooth
@@ -39,7 +39,7 @@ function run(dur){
         easing: smooth
     });
     times.add({
-        targets: '.fa-bars',
+        targets: '.fa-bars,#back',
         opacity: 1,
         left: "2%",
         duration: dur/2,
@@ -68,7 +68,7 @@ function expandLeft(){
         });
         moving.add({
             targets: "#leftBar,#container",
-            left: {value: "+=190"},
+            left: {value: "+=250"},
             duration: 500,
             easing: smooth
         });
@@ -82,7 +82,7 @@ function expandLeft(){
         });
         moving.add({
             targets: "#leftBar,#container",
-            left:{ value: "-=190"},
+            left:{ value: "-=250"},
             duration: 500,
             easing: smooth
             });
@@ -92,5 +92,28 @@ function expandLeft(){
 function moveto(el){
     var id = $(el).attr('href');
     $('html,body').stop().animate({scrollTop: $(id).offset().top},1000);
-
 }
+
+function gotoHome(){
+    times.pause();
+    times = new anime.timeline();
+    times.add({
+        targets: "#WORKP",
+        opacity: 0,
+        duration: 1000,
+        easing: smooth
+    });
+    times.add({
+        targets: "body",
+        backgroundColor: 'rgb(0,0,0)',
+        duration: 1000,
+        easing: smooth
+    });
+    setTimeout(function(){
+        if(times.finished){
+            window.location.href = "index.html";
+        }
+       },2000);
+}
+
+

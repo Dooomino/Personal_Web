@@ -1,5 +1,5 @@
 let times= new anime.timeline();
-
+var isdone=false;
 function menuin(){
     for(i=1;i<4;i++){
         times.add({
@@ -63,9 +63,8 @@ function run(dur){
                 easing:"easeOutSine"
             });
       times.add({
-                targets:"#title .change",
+                targets:".change",
                 opacity:1,
-                translateY:-10*count,
                 duration: dur/2 ,
                 easing:"easeOutSine"
             });
@@ -79,6 +78,7 @@ function run(dur){
     menuin();
 
 
+
     
     
 
@@ -86,7 +86,7 @@ function run(dur){
 
  window.onload=function(){
      run(1000);    
-     var isdone=false;
+
      document.addEventListener("keydown",function(event){
          if (!isdone){
             done();

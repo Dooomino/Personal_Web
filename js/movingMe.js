@@ -22,32 +22,11 @@ function run(dur){
         easing: "easeOutSine"
     });
     times.add({
-        targets:"#Topbar",
-        width: '100%',
-        backgroundColor: 'rgb(255, 255, 255)',
-        duration:dur,
-        easing: smooth
-    });
-    times.add({
-        targets:".text2",
+        targets:".text2,#info,#Timeline",
         opacity: 1,
         duration:dur,
         easing: smooth
     });
-
-    times.add({
-        targets: "#avatar",
-        opacity: 1,
-        translateY:'-=20',
-        duration:dur/2,
-        easing: smooth
-    });
-    times.add({
-        targets:"#info",
-        opacity: 1,
-        duration:dur,
-        easing:smooth
-    })
 } 
 
 
@@ -74,17 +53,31 @@ function gotoHome(){
 }
 
 var divs,i;
+var windowHeight = document.documentElement.clientHeight;
 
-window.onscroll=function(){
+
+function checkpos(){
+    var scrollBarTop = document.body.scrollTop;
     var divs=document.querySelectorAll("#Timeline .times"),i;
     for(i=0;i<divs.length;i++){
-        var c=i%colors.length;
-        if($("html,body").scrollTop().offset().top==$(divs[i]).scrollTop().offset().top){
-            $(".fa-circle").css("color",colors[c]);
+        var c=i%(colors.length+1);
+        var targetTop = document.getElementsByClassName('time'+(i+1))[0].offsetTop;
+        var count = windowHeight + scrollBarTop-$(divs[i]).height()+20;
+        if(targetTop<count){
+            $(".circle"+(i+1)).css("color","#fff");
+        }else{
+            $(".circle"+(i+1)).css("color","#000");
         }
     }
 
 }
+window.onscroll=checkpos;
+
+function moveto(el){
+    var id = $(el).attr('href');
+    $('html,body').stop().animate({scrollTop: $(id).offset().top},1000);
+}
+
 
 window.onload = function(){
     times=new anime.timeline();
@@ -95,4 +88,5 @@ window.onload = function(){
         var c=i%colors.length;
         $(divs[i]).css("backgroundColor",colors[c]);
     }
+    checkpos();
 }

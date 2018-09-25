@@ -37,6 +37,21 @@ a{
     transform: scale(2);
 }
 
+.fa-arrow-left{
+    color: white;
+}
+
+#back{
+    position: fixed;
+    opacity: 0;
+    float: left;
+    top: 90%;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    z-index: 99999;
+}
+
 #container{
     position: relative;
     left: 5%;
