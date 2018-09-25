@@ -136,3 +136,12 @@ function gotoMe(){
         }
     },1000);
 }
+
+document.onclick=clickDo
+
+function clickDo(){
+    if(!isdone){
+        done();
+        isdone=true;
+    }
+}
