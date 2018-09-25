@@ -13,7 +13,7 @@ a{
 
 #Topbar{
     position: fixed;
-    z-index: 1000;
+    z-index: 10000;
     width: 100%;
     height: 10%;
     transform: translate(0,-20%);
@@ -152,3 +152,18 @@ a{
     background-color: orangered;
     text-orientation: upright;
 }
+
+#nav{
+    position: fixed;
+    z-index: 1002;
+    top: 50%;
+    left:98%;
+    width: 0%;
+    height: 20%;
+}
+
+.fa-circle{
+    margin: 5px;
+    opacity: 0.5;
+}
+

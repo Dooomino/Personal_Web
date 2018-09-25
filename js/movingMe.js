@@ -73,6 +73,19 @@ function gotoHome(){
        },2000);
 }
 
+var divs,i;
+
+window.onscroll=function(){
+    var divs=document.querySelectorAll("#Timeline .times"),i;
+    for(i=0;i<divs.length;i++){
+        var c=i%colors.length;
+        if($("html,body").scrollTop().offset().top==$(divs[i]).scrollTop().offset().top){
+            $(".fa-circle").css("color",colors[c]);
+        }
+    }
+
+}
+
 window.onload = function(){
     times=new anime.timeline();
     run(1000);
