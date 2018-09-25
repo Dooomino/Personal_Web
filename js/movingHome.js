@@ -23,15 +23,15 @@ function run(dur){
             duration: dur,
             easing:"easeOutSine"
         });
-        if(i==2){
-            times.add({
-                targets:"#skip",
-                opacity:0.5,
-                duration: dur,
-                easing:"easeOutSine"
-            });
-            
-        }
+//        if(i==2){
+//            times.add({
+//                targets:"#skip",
+//                opacity:0.5,
+//                duration: dur,
+//                easing:"easeOutSine"
+//            });
+//
+//        }
         
         if(i<count){
             times.add({
@@ -68,13 +68,13 @@ function run(dur){
                 duration: dur/2 ,
                 easing:"easeOutSine"
             });
-    times.add({
-                targets:"#skip",
-                opacity:0,
-                translateY:-1000,
-                duration: dur/2,
-                easing:"easeOutSine"
-            });
+//    times.add({
+//                targets:"#skip",
+//                opacity:0,
+//                translateY:-1000,
+//                duration: dur/2,
+//                easing:"easeOutSine"
+//            });
     menuin();
 
 
