@@ -1,6 +1,7 @@
-let times= new anime.timeline();
-var isdone=false;
+var times= new anime.timeline();
+var isdone=false,count;
 function menuin(){
+    var i;
     for(i=1;i<4;i++){
         times.add({
             targets:"#menus .menu"+i,
@@ -15,7 +16,7 @@ function menuin(){
 function run(dur){
     count = document.querySelectorAll("#title .text").length;
 //     console.log(count);
-    for(i=1;i<count+1;i++){
+    for(var i=1;i<count+1;i++){
         times.add({
             targets:"#title .text"+String(i),
             translateY:-10,

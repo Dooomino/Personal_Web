@@ -20,10 +20,12 @@ $(document).ready(function(){
     }
 });
 
+var initl;
 
 
 
 function run(dur){
+    initl=-0.25*$(window).width();
      times.add({
         targets: "body",
         backgroundColor: "rgb(137, 212, 245)",
@@ -34,7 +36,7 @@ function run(dur){
     times.add({
         targets: "#leftBar",
         opacity: 1,
-        left: "-25%",
+        left: initl,
         duration: dur,
         easing: smooth
     });
@@ -55,6 +57,7 @@ function run(dur){
 }
 
 function expandLeft(){
+    initl=0.25*$("#leftBar").width();
     times.pause();
     $("#icon").toggleClass("active");
     var moving = new anime.timeline();
@@ -68,7 +71,7 @@ function expandLeft(){
         });
         moving.add({
             targets: "#leftBar,#container",
-            left: {value: "+=250"},
+            left: {value: "+="+($("#leftBar").width()-initl)},
             duration: 500,
             easing: smooth
         });
@@ -82,7 +85,7 @@ function expandLeft(){
         });
         moving.add({
             targets: "#leftBar,#container",
-            left:{ value: "-=250"},
+            left:{ value: "-="+($("#leftBar").width()-initl)},
             duration: 500,
             easing: smooth
             });
@@ -99,7 +102,7 @@ function gotoHome(){
     times = new anime.timeline();
     times.add({
         targets: "#WORKP",
-        opacity: 0,
+        translateY:"+="+$(window).height(),
         duration: 1000,
         easing: smooth
     });
@@ -107,6 +110,7 @@ function gotoHome(){
         targets: "body",
         backgroundColor: 'rgb(0,0,0)',
         duration: 1000,
+        delay:100,
         easing: smooth
     });
     setTimeout(function(){
