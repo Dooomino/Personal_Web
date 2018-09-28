@@ -1,69 +1,52 @@
 <html>
-    <head>
-        <meta>
-        <link rel="stylesheet" type="text/css" href="css/works.css">
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <script type="text/javascript" src="js/anime.min.js"></script>
-        <script type="text/javascript" src="js/movingworks.js"></script>
-    </head>
-    <body>
-        <div id="WORKP">
-            <div id="leftBar">
-                <nav>
-                    <ul id="mylist">
-                        <li class="works"><a href="#el1" onclick="moveto(this)">Solar system</a></li>
-                        <li class="works"><a href="#el2" onclick="moveto(this)">Rune generator</a></li>
-                        <li class="works"><a href="#el3" onclick="moveto(this)">1</a></li>
-                        <li class="works"><a href="#el4" onclick="moveto(this)">2</a></li>
-                        <li class="works"><a href="#el5" onclick="moveto(this)">3</a></li>
-                        <li class="works"><a href="#el6" onclick="moveto(this)">4</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="icon">
-                <i class="fas fa-bars" onclick="expandLeft()"></i>
-                <div id="back">
-                    <i class="fas fa-arrow-left"></i>
-                    <a href="#" onclick="gotoHome()"><p style="color: white">Back</p></a>
-                </div>
-            </div>
-            <div id="container">
-                <li class="worksheets" id="el1">
-                    <div>
-                        <video width="80%" height="100%" controls>
-                            <source src="VID/processing-movie.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    </li>
-                <li class="worksheets" id="el2">
-                    <div>
-                        <video width="80%" height="100%" controls>
-                            <source src="VID/rune-generator.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    </li>
-                <li class="worksheets" id="el3">
-                    <div>
+	<head>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<link rel="stylesheet" type="text/css" href="css/works.css">
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/anime.js"></script>
+		<script type="text/javascript" src="js/movingWork.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	</head>
+	<body>
+	<div id="WORKP">
+		<div id="leftBar">
+			<a id="openbar" href="javascript:;" onclick="openbar()"><i class="fas fa-bars"></i></a>
+			<ul>
+				<a href="#li1" onclick="goto(this)"><li class="ListWorks">The Soloar System</li></a>
+				<a href="#li2" onclick="goto(this)"><li class="ListWorks">The Rune Generator</li></a>
+				<a href="#li3" onclick="goto(this)"><li class="ListWorks">3</li></a>
+				<a href="#li4" onclick="goto(this)"><li class="ListWorks">4</li></a>
+				<a href="#li5" onclick="goto(this)"><li class="ListWorks">5</li></a>
+			</ul>
+			<a href="#" onclick="gotoHome()"><i class="fas fa-arrow-left">Home</i></a>
+		</div>
+		<div id="backColors">
+			<ul>
+				<li id="li1" class="items"><div>
+					<video src="VID/processing-movie.mp4" controls>
+					</video>
+					<h1>The Solar System</h1>
+					<h2>Made by the programing language Processing, a production within 32 hours to made.</h2>
+				</div></li>
+				<li id="li2" class="items"><div>
+					<h2>Was inspiring by Cryptography and combined with word generation</h2>
+					<h1>The Rune Generator</h1>
+					<video src="VID/rune-generator.mp4" controls>
+					</video>
 
-                    </div>
-                    </li>
-                <li class="worksheets" id="el4">
-                    <div>
+				</div></li>
+				<li id="li3" class="items"><div>
 
-                    </div>
-                    </li>
-                <li class="worksheets" id="el5">
-                    <div>
+				</div></li>
+				<li id="li4" class="items"><div>
 
-                    </div>
-                    </li>
-                <li class="worksheets" id="el6">
-                    <div>
+				</div></li>
+				<li id="li5" class="items"><div>
 
-                    </div>
-                    </li>
-            </div>
-        </div>
-    </body>
+				</div></li>
+			</ul>
+		</div>
+	</div>
+	</body>
+
 </html>
