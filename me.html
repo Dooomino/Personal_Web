@@ -1,65 +1,26 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/me.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <script type="text/javascript" src="js/anime.min.js"></script>
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <Title>Dooomino</Title>
-    </head>
-    <body>
-        <script type="text/javascript" src="js/movingMe.js"></script>
-        <div id="Me">
-            <div id="MeContain">
-                <div id="Topbar">
-                    <div class="text text1">ME</div>
-                    <div><a class="text text2" href="#" onclick="gotoHome()"><i class="fas fa-arrow-left"></i>Home</a></div>
-                </div>
-                <div id="info">
-                    <img id="avatar" src="image/head.jpeg"/>
-                    <ul class="leftinfo">
-                        <li>E-Mail:&nbsp;<a href="MailTo:">yudi.tao@hotmail.com</a></li>
-                        <li>Linkin:&nbsp;<a href="https://www.linkedin.com/in/yudi-tao-862561113/" target="_blank">Yudi Tao</a></li>
-                    </ul>
-                    <p id="contact">CONTACT</p>
-                </div>
-<!--
-                <div id="svgs" style="position: absolute; left:0%;z-index: 998;">
-                    <svg style="width:100%;height: 100%">
-                        <path d="M 300 50 C 300 50 300 100 300 100 C 300 150 300 150 250 200 C 200 250 250 250 300 300 C 350 350 300 400 300 400 C 250 450 250 450 250 500 C 250 550 300 600 300 650 L 300 750 " fill="transparent" stroke="white" stroke-width="10px"/>
-                    </svg>
-                </div>
--->
-                <div id="Timeline">
-                    <div id="nav">
-                        <a class="jumping" href="#time1" onclick="moveto(this)"><i class="fas fa-circle circle1"></i></a>
-                        <a class="jumping" href="#time2" onclick="moveto(this)"><i class="fas fa-circle circle2"></i></a>
-                        <a class="jumping" href="#time3" onclick="moveto(this)"><i class="fas fa-circle circle3"></i></a>
-                        <a class="jumping" href="#time4" onclick="moveto(this)"><i class="fas fa-circle circle4"></i></a>
-                        <a class="jumping" href="#time5" onclick="moveto(this)"><i class="fas fa-circle circle5"></i></a>
-                    </div>
-                    <div id="time1" class="times time1">
-
-                    </div>
-                    <div id="time2" class="times time2">
-
-                    </div>
-                    <div id="time3" class="times time3">
-
-                    </div>
-                    <div id="time4" class="times time4">
-
-                    </div>
-                    <div id="time5" class="times time5">
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-    </body>
-    
-    
-
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/me.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<script type="text/javascript" src="js/anime.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/movingMe.js"></script>
+		<Title>Dooomino</Title>
+	</head>
+	<body>
+		<div id="Topbar"></div>
+		<div id="cover">
+			<svg>
+				<pattern id="pat" patternUnit="userSpaceOnUse" width="100%" height="100%">
+					<image width="100%" height="100%" xlink:href="/image/Cover.jpeg"></image>
+				</pattern>
+				<text id="coverText">Dooomino (YUDI)</text>
+			</svg>
+			<!--<img src="image/Cover.jpeg">-->
+		</div>
+		<div id="TimeLine">
+			<div id="LeftCon"></div>
+			<div id="RightCon"></div>
+		</div>
+	</body>
 </html>
