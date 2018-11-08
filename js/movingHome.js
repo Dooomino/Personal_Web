@@ -8,9 +8,15 @@ function menuin(){
             opacity:1,
             translateY:-10,
             duration:500,
-            easing:"easeOutSine"
+            easing:"easeOutSine",
         });
     }
+	times.add({
+			targets:"#powered",
+			bottom: "0%",
+			duration:500,
+            easing:"easeOutSine",
+		});
  }
 
 function run(dur){
@@ -69,13 +75,6 @@ function run(dur){
                 duration: dur/2 ,
                 easing:"easeOutSine"
             });
-//    times.add({
-//                targets:"#skip",
-//                opacity:0,
-//                translateY:-1000,
-//                duration: dur/2,
-//                easing:"easeOutSine"
-//            });
     menuin();
 
 

@@ -1,78 +1,185 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-body {
-	font-family: 'Open Sans', sans-serif;
-	background-color: black;
-	text-shadow: 2px 2px rgba(150, 150, 150, 0.2);
-	overflow-x: hidden;
-	color: white;
-	padding: 0;
-	margin: 0;
+body{
+    font-family: 'Open Sans',sans-serif;
+    background-color: black;
+    text-shadow: 2px 2px rgba(150, 150, 150, 0.2);
+    overflow-x: hidden;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 #Topbar{
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	opacity: 0;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	float: left;
-	width: 100%;
-	height: 10%;
-	background-color: white;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 10%;
+    transform: translate(0,-20%);
+    background-color: white;
+    float: left;
+    margin: 0;
+    padding: 0;
 }
 
-#cover{
-	position: absolute;
-	float: left;
-	top: 10%;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 80%;
-	overflow: hidden;
+#Timeline{
+    position:relative;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.times{
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 
-#coverText{
-	font-size: 10vw;
-	fill:url(#pat);
+
+#Me{
+    position: absolute;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    float: left;
+    opacity:  0;
+    width: 100%;
+    height: 100%;
 }
 
-#TimeLine{
-	position: absolute;
-	top: 80%;
-	float: left;
-	width: 100%;
-	height: 100%;
-	background-color:cornflowerblue;
+.text{
+    position: absolute;
+    color: black;
+    font-weight: 600;
+    font-size: 32;
 }
 
-#LeftCon{
-	position: absolute;
-	z-index: 999;
-	top: 0;
-	left: 0;
-	width: 49.5%;
-	height: 100%;
-	float: left;
-	background-color: white;
+.text1{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.text2{
+    text-align: center;
+    opacity: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#MeContain{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#avatar{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border-style: outset;
+    border-width: 10px;
+    border-color: white;
+}
+
+
+#info{
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    top: 20%;
+    left: -45%;
+    float: left;
+    width: 50%;
+    height: 50%;
+    color: white;
+    background-color: black;
+    animation: swipeininfo 0.5s cubic-bezier(.43, .59, .72, 1.00) 1;
+}
+
+#info:hover{
+    left: 0%;
+    animation: swipeoutinfo 0.5s cubic-bezier(.43, .59, .72, 1.00) 1;
+}
+
+@keyframes swipeoutinfo{
+    from{left: -45%;}
+    to{left: 0%;}
+}
+@keyframes swipeininfo{
+    from{left: 0%;}
+    to{left: -45%;}
+}
+
+.leftinfo{
+    position: absolute;
+    top: 30%;
+    list-style: none;
+    font-weight: 400;
+    font-size: 32;
+    float: left;
+/*    background-color: rgb(80, 80, 80);*/
+    width: auto;
+    height: auto;
+    margin: 10;
+    padding:10;
+}
+
+
+#contact{
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    left: 90%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    word-spacing: 0;
+    font-size: 22;
+    word-wrap: break-word;
+    writing-mode: vertical-lr;
+    background-color: orangered;
+    text-orientation: upright;
+}
+
+#nav{
+    position: fixed;
+    z-index: 1002;
+    top: 50%;
+    left:98%;
+    width: 0%;
+    height: 20%;
+}
+
+.fa-circle{
+    margin: 5px;
+    opacity: 0.5;
+    transform: scale(1);
+    animation: zoomcirin 1s cubic-bezier(.43, .59, .72, 1.00) 1;
+}
+.fa-circle:hover{
+    transform: scale(1.5);
+    animation: zoomcirout 0.5s cubic-bezier(.43, .59, .72, 1.00) 1;
 
 }
-#RightCon{
-	position: absolute;
-	z-index: 999;
-	top: 0;
-	right: 0;
-	width: 49.5%;
-	height: 100%;
-	float: left;
-	background-color: white;
+
+@keyframes zoomcirin{
+    from{transform: scale(1.5);}
+    to{transform: scale(1);}
+}
+@keyframes zoomcirout{
+    from{transform: scale(1);}
+    to{transform: scale(1.5);}
 }

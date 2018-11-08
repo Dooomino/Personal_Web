@@ -114,3 +114,21 @@ function gotoHome(){
         }
        },2000);
 }
+
+
+function checkpos(){
+    var scrollBarTop = document.body.scrollTop;
+    var divs=document.querySelectorAll("#leadBar .times"),i;
+    for(i=0;i<divs.length;i++){
+        var c=i%(colors.length+1);
+        var targetTop = document.getElementsByClassName('time'+(i+1))[0].offsetTop;
+        var count = windowHeight + scrollBarTop-$(divs[i]).height()+20;
+        if(targetTop<count){
+            $(".circle"+(i+1)).css("color","#fff");
+        }else{
+            $(".circle"+(i+1)).css("color","#000");
+        }
+    }
+
+}
+window.onscroll=checkpos;
