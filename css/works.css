@@ -79,29 +79,25 @@ a {
 		width: 100%;
 		opacity: 0.3;
 		font-size: 1vw;
-		filter: blur(1px);
-		animation: ListWorksout 1s cubic-bezier(.32, .61, .75, 1.0) 1;
+		animation: ListWorksout 0.3s cubic-bezier(.32, .61, .75, 1.0) 1;
 		word-wrap: break-word;
 	}
 
 	.ListWorks:hover {
 		opacity: 1;
 		font-size: 2vw;
-		filter: blur(0);
-		animation: ListWorksin 1s cubic-bezier(.32, .61, .75, 1.0) 1;
+		animation: ListWorksin 0.3s cubic-bezier(.32, .61, .75, 1.0) 1;
 	}
 
 	@keyframes ListWorksin {
 		from {
 			opacity: 0.3;
 			font-size: 1vw;
-			filter: blur(1px);
 		}
 
 		to {
 			opacity: 1;
 			font-size: 2vw;
-			filter: blur(0);
 		}
 	}
 
@@ -109,13 +105,11 @@ a {
 		from {
 			opacity: 1;
 			font-size: 2vw;
-			filter: blur(0);
 		}
 
 		to {
 			opacity: 0.3;
 			font-size: 1vw;
-			filter: blur(1px);
 		}
 	}
 }
