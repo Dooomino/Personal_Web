@@ -8,14 +8,14 @@ function menuin(){
             opacity:1,
             translateY:-10,
             duration:500,
-            easing:"easeOutSine",
+            easing:"easeOutSine"
         });
     }
 	times.add({
 			targets:"#powered",
 			bottom: "0%",
 			duration:500,
-            easing:"easeOutSine",
+            easing:"easeOutSine"
 		});
  }
 
@@ -73,7 +73,10 @@ function run(dur){
                 targets:".change",
                 opacity:1,
                 duration: dur/2 ,
-                easing:"easeOutSine"
+                easing:"easeOutSine",
+                complete:function(){
+                    $("#menus").css("display","flex");
+                }
             });
     menuin();
 

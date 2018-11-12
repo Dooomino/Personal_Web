@@ -66,11 +66,13 @@ a{
         width: 100%;
         align-items: center;
         justify-content: center;
-        display: flex;
+/*        display: flex;*/
     /*    overflow: hidden;*/
         margin: 0;
         padding: 0;
         text-align: center;
+        align-content: center;
+        display: none;
         color: white;
     }
 
@@ -110,6 +112,9 @@ a{
         height: 30%;
         margin: 0;
         padding: 0;
+        display: none;
+        text-align: center;
+        align-content: center;
         color: white;
     }
 
