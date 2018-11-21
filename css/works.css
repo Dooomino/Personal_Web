@@ -183,13 +183,13 @@ a {
 
 .fa-arrow-left {
 	position: absolute;
-	top: 1%;
+	top: 30%;
 	left: 1%;
 }
 
 .fa-bars {
-	position: absolute;
-	top: 1%;
+	position: relative;
+	top: 30%;
 	left: 90%;
 	z-index: 999;
 }

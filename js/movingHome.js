@@ -1,5 +1,6 @@
 var times= new anime.timeline();
 var isdone=false,count;
+var savedcss;
 function menuin(){
     var i;
     for(i=1;i<4;i++){
@@ -75,7 +76,7 @@ function run(dur){
                 duration: dur/2 ,
                 easing:"easeOutSine",
                 complete:function(){
-                    $("#menus").css("display","flex");
+                    $("#menus").css("display",savedcss);
                 }
             });
     menuin();
@@ -88,6 +89,8 @@ function run(dur){
 }
 
  window.onload=function(){
+    savedcss = $("#menus").css("display");
+    $("#menus").css("display","none");
      run(1000);    
 
      document.addEventListener("keydown",function(event){
