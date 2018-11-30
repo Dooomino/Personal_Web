@@ -18,7 +18,7 @@ function run(dur){
 		easing:smooth
 	}).add({
 		targets:"#WORKP",
-		opacity:1,
+		opacity:[0,1],
 		duration:dur,
 		easing: smooth,
 		offset:dur
