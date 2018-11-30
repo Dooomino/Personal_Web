@@ -12,8 +12,18 @@ h2{
 	font-family: monospace;
 	font-weight: 200;
     font-size: 2vw;
+    text-align: center;
+    margin: 5px 5px;
 }
+h1{
+    font-family: monospace;
+	font-weight: 100;
+    font-size: 4vw;
+    text-align: center;
+    margin: 5px 5px;
 
+}
+}
 #WORKP{
 	opacity: 0;
 }
@@ -60,10 +70,6 @@ a {
 		width: 50%;
 		height: 60%;
 	}
-    .items div iframe{
-        width: 50%;
-        height: 60%
-    }
 	.items{
 		position: relative;
 		float: left;
@@ -149,10 +155,6 @@ a {
 		width: 100%;
 		height: 30%;
 	}
-     .items div iframe{
-        width: 100%;
-        height: 30%
-    }
 	.items{
 		position: relative;
 		float: left;
@@ -207,8 +209,9 @@ a {
 	margin: 0;
 	padding: 0;
 }
-#li3{
-    text-align: right;
+#li3 div iframe{
+    height:500px;
+    width:500px;
 }
 
 
