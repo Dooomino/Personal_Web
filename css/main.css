@@ -168,3 +168,14 @@ a{
 	color: white;
 	opacity: 1;
 }
+
+#logodrawing{
+    position: absolute;
+    top: 5%;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    transform: scale(0.5);
+}

@@ -16,7 +16,7 @@ function menuin(){
 			targets:"#powered",
 			bottom: "0%",
 			duration:500,
-            easing:"easeOutSine"
+            easing:"easeOutSine",
 		});
  }
 
@@ -78,21 +78,28 @@ function run(dur){
                 complete:function(){
                     $("#menus").css("display",savedcss);
                 }
+            }).add({
+                targets: '.lines path',
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: smooth,
+                duration: 1500,
+                delay: function(el, i) { return i * 250 },
+                direction: 'alternate',
+            }).add({
+                targets: '.lines circle',
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: smooth,
+                duration: 1500,
+                delay: function(el, i) { return i * 250 },
+                direction: 'alternate',
             });
     menuin();
-
-
-
-    
-    
-
 }
 
  window.onload=function(){
     savedcss = $("#menus").css("display");
     $("#menus").css("display","none");
-     run(1000);    
-
+     run(1000);
      document.addEventListener("keydown",function(event){
          if (!isdone){
             done();
@@ -150,4 +157,26 @@ function clickDo(){
         done();
         isdone=true;
     }
+}
+
+
+
+var ln = new anime.timeline()
+var smooth = [.19,1.0,.77,1.0]
+function loadlogo(){
+    ln.add({
+        targets: '.lines path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: smooth,
+        duration: 1500,
+        delay: function(el, i) { return i * 250 },
+        direction: 'alternate',
+    }).add({
+        targets: '.lines circle',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: smooth,
+        duration: 1500,
+        delay: function(el, i) { return i * 250 },
+        direction: 'alternate',
+    });
 }
