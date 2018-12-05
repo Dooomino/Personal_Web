@@ -127,12 +127,6 @@ function done(){
 
 function logoOut(c){
     c.add({
-            targets: '.lines',
-            easing: smooth,
-            duration: 1000,
-    //                 delay: function(el, i) { return i * 250 },
-        });
-    c.add({
         targets: '.lines circle, path',
         opacity: [1,0.6],
         strokeDashoffset: [0,anime.setDashoffset],
