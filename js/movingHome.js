@@ -22,12 +22,6 @@ function menuin(){
             easing: smooth,
             duration: 1000,
     //                 delay: function(el, i) { return i * 250 },
-        }).add({
-            targets: '.lines',
-            scale:0.5,
-            easing: smooth,
-            duration: 1000,
-    //                 delay: function(el, i) { return i * 250 },
         });
     for(i=1;i<4;i++){
         c.add({
@@ -134,7 +128,6 @@ function done(){
 function logoOut(c){
     c.add({
             targets: '.lines',
-            scale:1,
             easing: smooth,
             duration: 1000,
     //                 delay: function(el, i) { return i * 250 },
@@ -165,7 +158,7 @@ function gotoWork(){
             console.log("done");
             window.location.href="works.html";
         }
-    },3000);
+    },2000);
 }
 function gotoMe(){
     times.pause();
@@ -182,7 +175,7 @@ function gotoMe(){
             console.log("done");
             window.location.href="me.html";
         }
-    },3000);
+    },2000);
 }
 
 document.onclick=clickDo
