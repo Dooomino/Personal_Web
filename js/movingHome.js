@@ -1,10 +1,36 @@
 var times= new anime.timeline();
 var isdone=false,count;
 var savedcss;
+var ln = new anime.timeline();
+var smooth = [.19,1.0,.77,1.0];
+
 function menuin(){
     var i;
+    var c= times
+	c.add({
+            targets: '.lines circle',
+            opacity: [0,1],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: smooth,
+            duration: 1000,
+//                    delay: function(el, i) { return i * 250 },
+        })
+        .add({
+            targets: '.lines path',
+            opacity: [0,1],
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: smooth,
+            duration: 1000,
+    //                 delay: function(el, i) { return i * 250 },
+        }).add({
+            targets: '.lines',
+            scale:0.5,
+            easing: smooth,
+            duration: 1000,
+    //                 delay: function(el, i) { return i * 250 },
+        });
     for(i=1;i<4;i++){
-        times.add({
+        c.add({
             targets:"#menus .menu"+i,
             opacity:1,
             translateY:-10,
@@ -12,11 +38,14 @@ function menuin(){
             easing:"easeOutSine"
         });
     }
-	times.add({
+    c.add({
 			targets:"#powered",
 			bottom: "0%",
 			duration:500,
             easing:"easeOutSine",
+            complete:function(){
+                isdone=true;
+            }
 		});
  }
 
@@ -78,20 +107,6 @@ function run(dur){
                 complete:function(){
                     $("#menus").css("display",savedcss);
                 }
-            }).add({
-                targets: '.lines path',
-                strokeDashoffset: [anime.setDashoffset, 0],
-                easing: smooth,
-                duration: 1500,
-                delay: function(el, i) { return i * 250 },
-                direction: 'alternate',
-            }).add({
-                targets: '.lines circle',
-                strokeDashoffset: [anime.setDashoffset, 0],
-                easing: smooth,
-                duration: 1500,
-                delay: function(el, i) { return i * 250 },
-                direction: 'alternate',
             });
     menuin();
 }
@@ -113,13 +128,32 @@ function done(){
     times.pause();
     times = new anime.timeline();
 //    console.log("done")
-    run(10);
+    run(1);
 }
+
+function logoOut(c){
+    c.add({
+            targets: '.lines',
+            scale:1,
+            easing: smooth,
+            duration: 1000,
+    //                 delay: function(el, i) { return i * 250 },
+        });
+    c.add({
+        targets: '.lines circle, path',
+        opacity: [1,0.6],
+        strokeDashoffset: [0,anime.setDashoffset],
+        easing: smooth,
+        duration: 1000,
+    });
+}
+
 
 
 function gotoWork(){
     times.pause();
     times = new anime.timeline();
+    logoOut(times);
     times.add({
         targets:"#Home",
         opacity:0,
@@ -131,11 +165,12 @@ function gotoWork(){
             console.log("done");
             window.location.href="works.html";
         }
-    },1000);
+    },3000);
 }
 function gotoMe(){
     times.pause();
     times = new anime.timeline();
+    logoOut(times);
     times.add({
         targets:"#Home",
         opacity:0,
@@ -147,7 +182,7 @@ function gotoMe(){
             console.log("done");
             window.location.href="me.html";
         }
-    },1000);
+    },3000);
 }
 
 document.onclick=clickDo
@@ -160,9 +195,6 @@ function clickDo(){
 }
 
 
-
-var ln = new anime.timeline()
-var smooth = [.19,1.0,.77,1.0]
 function loadlogo(){
     ln.add({
         targets: '.lines path',
