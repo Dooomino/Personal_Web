@@ -10,12 +10,11 @@ function menuin(){
 	c.add({
             targets: '.lines circle',
             opacity: [0,1],
-            strokeDashoffset: [anime.setDashoffset, 0],
+            strokeDashoffset: [anime.setDashoffset, -0.1],
             easing: smooth,
             duration: 1000,
 //                    delay: function(el, i) { return i * 250 },
-        })
-        .add({
+        }).add({
             targets: '.lines path',
             opacity: [0,1],
             strokeDashoffset: [anime.setDashoffset, 0],
@@ -135,8 +134,6 @@ function logoOut(c){
     });
 }
 
-
-
 function gotoWork(){
     times.pause();
     times = new anime.timeline();
@@ -180,7 +177,6 @@ function clickDo(){
         isdone=true;
     }
 }
-
 
 function loadlogo(){
     ln.add({
