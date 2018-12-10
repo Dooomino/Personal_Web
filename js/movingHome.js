@@ -13,14 +13,12 @@ function menuin(){
             strokeDashoffset: [anime.setDashoffset, -0.1],
             easing: smooth,
             duration: 1000,
-//                    delay: function(el, i) { return i * 250 },
         }).add({
             targets: '.lines path',
             opacity: [0,1],
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: smooth,
             duration: 1000,
-    //                 delay: function(el, i) { return i * 250 },
         });
     for(i=1;i<4;i++){
         c.add({

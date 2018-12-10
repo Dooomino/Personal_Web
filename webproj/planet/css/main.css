@@ -115,7 +115,7 @@ a{
     display: flex;
     margin: 0;
     padding: 0;
-    animation: rotate2 3s cubic-bezier(0, 0, 1, 1) infinite;
+    animation: rotate2 4s cubic-bezier(0, 0, 1, 1) infinite;
 }
 
 #moon2 div{
@@ -150,7 +150,7 @@ a{
     display: flex;
     margin: 0;
     padding: 0;
-    animation: rotate3 4s cubic-bezier(0, 0, 1, 1) infinite;
+    animation: rotate3 8s cubic-bezier(0, 0, 1, 1) infinite;
 }
 
 #moon3 div{
