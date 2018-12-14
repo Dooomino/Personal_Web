@@ -25,19 +25,6 @@ a{
     display: inline-block;
     transform: scale(0.5);
 }
-
-/*
-#leftCover{
-    position: absolute;
-    top:70%;
-    opacity: 0.5;
-    background-color: white;
-    width: 0%;
-    height: 30%;
-}
-*/
-
-
 #title{
     position: absolute;
     text-align: center;
@@ -85,15 +72,12 @@ a{
     .menu{
         list-style-type: none;
         float: left;
-    /*    display:inline;*/
-    /*    zoom:1; IE7*/
         text-align: center;
         width: 20%;
         height: 50px;
         line-height: 50px;
         padding: 0;
         margin: 0 1;
-        background-color: rgb(0,0,0);
         opacity: 0;
         animation: changeColorout 0.5s cubic-bezier(.42, 0, .58, 1) 1;
     }
@@ -105,7 +89,6 @@ a{
         text-align: center;
     }
     .menu:hover{
-        background-color: rgb(100, 100, 100);
         animation: changeColorin 0.5s cubic-bezier(.42, 0, .58, 1) 1;
     }
 }
@@ -147,14 +130,14 @@ a{
     #logodrawing{
         top: 0%;
     }
-}
-@keyframes changeColorin{
-    from{background-color: rgb(0,0,0);}
-    to{background-color: rgb(100, 100, 100);}
-}
-@keyframes changeColorout{
-    from{background-color: rgb(100, 100, 100);}
-    to{background-color: rgb(0,0,0);}
+	@keyframes changeColorin{
+		from{background-color: rgb(100, 100, 100);}
+		to{}
+	}
+	@keyframes changeColorout{
+		from{background-color: rgb(100, 100, 100);}
+		to{}
+	}
 }
 
 #powered{
