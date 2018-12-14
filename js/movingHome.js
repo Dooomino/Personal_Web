@@ -8,6 +8,9 @@ function menuin(){
     var i;
     var c= times
 	c.add({
+            before: function(){
+              $("#logodrawing").css("opacity","1");
+            },
             targets: '.lines circle',
             opacity: [0,1],
             strokeDashoffset: [anime.setDashoffset, -0.1],
@@ -22,6 +25,9 @@ function menuin(){
         });
     for(i=1;i<4;i++){
         c.add({
+            before:function(){
+                    $("#menus").css("display",savedcss);
+            },
             targets:"#menus .menu"+i,
             opacity:1,
             translateY:-10,
@@ -51,16 +57,6 @@ function run(dur){
             duration: dur,
             easing:"easeOutSine"
         });
-//        if(i==2){
-//            times.add({
-//                targets:"#skip",
-//                opacity:0.5,
-//                duration: dur,
-//                easing:"easeOutSine"
-//            });
-//
-//        }
-        
         if(i<count){
             times.add({
                 targets:"#title .text"+String(i),
@@ -95,15 +91,13 @@ function run(dur){
                 opacity:1,
                 duration: dur/2 ,
                 easing:"easeOutSine",
-                complete:function(){
-                    $("#menus").css("display",savedcss);
-                }
             });
     menuin();
 }
 
  window.onload=function(){
     savedcss = $("#menus").css("display");
+    $("#logodrawing").css("opacity","0");
     $("#menus").css("display","none");
      run(1000);
      document.addEventListener("keydown",function(event){
