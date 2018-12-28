@@ -1,10 +1,10 @@
 var smooth =[.50, 0.5, .71, 1]
 
-var colors=["rgb(255 204 92 )",
-            "rgb(255 238 173)",
-            "rgb(150 206 180)",
-            "rgb(136 216 176)",
-            "rgb(255 111 105)"
+var colors=["rgb(47,41,79)",
+            "rgb(255,238,173)",
+            "rgb(150,206,180)",
+            "rgb(136,216,176)",
+            "rgb(255,111,105)"
            ];
 
 function run(dur){
@@ -17,7 +17,7 @@ function run(dur){
 
     times.add({
         targets:"body",
-        backgroundColor: 'rgb(255, 255, 255)',
+        backgroundColor: 'rgb(47,41,79)',
         duration:dur,
         easing: "easeOutSine"
     });

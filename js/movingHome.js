@@ -6,41 +6,38 @@ var smooth = [.19,1.0,.77,1.0];
 var colorWheel=[
    "rgb(231,29,53)",
    "rgb(47,41,79)",
-   "rgb(27 153 139)",
+   "rgb(27,153,139)",
    "rgb(232,212,77)",
    "rgb(244,96,56)"
 ];
-
+var divcolor = new Array(colorWheel.length);
 
 function menuin(){
    var i;
    var c= times
    c.add({
          before: function(){
-           $("#logodrawing").css("opacity","1");
+           $("#logo").css("opacity","1");
          },
-         targets: '.lines circle',
-         opacity: [0,1],
-         strokeDashoffset: [anime.setDashoffset, -0.1],
-         easing: smooth,
-         duration: 1000,
-      }).add({
-         targets: '.lines path',
-         opacity: [0,1],
+         targets: '#logo line,path',
          strokeDashoffset: [anime.setDashoffset, 0],
+	     opacity:[0,1],
          easing: smooth,
-         duration: 1000,
+         duration: function(el,i){
+			 return 100*(i+1)+150;
+		 },
+		 delay: function(el,i){
+			 return 250*i;
+		 }
       });
-   for(i=1;i<4;i++){
+	$("#menus").css("display",savedcss)
+   	for(i=1;i<4;i++){
       c.add({
-         before:function(){
-               $("#menus").css("display",savedcss);
-         },
-         targets:"#menus .menu"+i,
-         opacity:1,
+         targets:".menu"+i,
+		 opacity:[0,1],
          translateY:-10,
          duration:500,
-         easing:"easeOutSine"
+         easing:"easeOutSine",
       });
    }
    c.add({
@@ -106,7 +103,6 @@ function run(dur){
 
  window.onload=function(){
    savedcss = $("#menus").css("display");
-   $("#logodrawing").css("opacity","0");
    $("#menus").css("display","none");
    run(1000);
    document.addEventListener("keydown",function(event){
@@ -114,39 +110,9 @@ function run(dur){
         done();
         isdone=true;
       }
-   })
-
-  	var amenu = new anime.timeline();
-   	$(".menu").each(function(i,obj){
-	  	var c=i%colorWheel.length;
-	 	obj.onmouseover=function(){
-		  amenu = new anime.timeline();
-		  amenu.add({
-			targets:".menu"+(i+1),
-			backgroundColor: colorWheel[c],
-			duration: 500,
-			easing:smooth
-		  });
-		}
-		obj.onmouseout=function(){
-		  amenu = new anime.timeline();
-		  amenu.add({
-			targets:".menu"+(i+1),
-			backgroundColor: 'rgb(0,0,0)',
-			duration: 1000,
-			easing:smooth
-		  });
-		}
-
-
-   })
-
-
+   });
  }
 
-
- 
- 
 function done(){
    times.pause();
    times = new anime.timeline();
@@ -156,11 +122,17 @@ function done(){
 
 function logoOut(c){
    c.add({
-      targets: '.lines circle, path',
-      opacity: [1,0.6],
-      strokeDashoffset: [0,anime.setDashoffset],
-      easing: smooth,
-      duration: 1000,
+       	 targets: '#logo line,path',
+         strokeDashoffset: [0,anime.setDashoffset],
+	     opacity:[1,0.3],
+         easing: smooth,
+         duration: function(el,i){
+			 return 200*(i+1);
+		 },
+		 delay: function(el,i){
+			 console.log(el.id);
+			 return 100*i;
+		 }
    });
 }
 
@@ -171,7 +143,7 @@ function gotoWork(){
    times.add({
       targets:"#Home",
       opacity:0,
-      duration:1000,
+	  duration:1000,
       easing:"easeOutSine"
    });
    setTimeout(function(){
@@ -179,7 +151,7 @@ function gotoWork(){
          console.log("done");
          window.location.href="works.html";
       }
-   },2000);
+   },3000);
 }
 function gotoMe(){
    times.pause();
@@ -196,7 +168,7 @@ function gotoMe(){
          console.log("done");
          window.location.href="me.html";
       }
-   },2000);
+   },3000);
 }
 
 document.onclick=clickDo
@@ -206,22 +178,4 @@ function clickDo(){
       done();
       isdone=true;
    }
-}
-
-function loadlogo(){
-   ln.add({
-      targets: '.lines path',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: smooth,
-      duration: 1500,
-      delay: function(el, i) { return i * 250 },
-      direction: 'alternate',
-   }).add({
-      targets: '.lines circle',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: smooth,
-      duration: 1500,
-      delay: function(el, i) { return i * 250 },
-      direction: 'alternate',
-   });
 }
