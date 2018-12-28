@@ -102,15 +102,22 @@ function run(dur){
 
 
  window.onload=function(){
-   savedcss = $("#menus").css("display");
-   $("#menus").css("display","none");
-   run(1000);
-   document.addEventListener("keydown",function(event){
-      if (!isdone){
-        done();
-        isdone=true;
-      }
-   });
+	savedcss = $("#menus").css("display");
+	$("#menus").css("display","none");
+	run(1000);
+	var WHeight = window.innerHeight;
+	var WWidth = window.innerWidth;
+
+	var perHSVG =WHeight/2000;
+	var perTSVG =-1*(WWidth/WHeight*WHeight/10);
+	$("#logo").css("transform","scale("+perHSVG+") translateY("+perTSVG+"%) translateX(-25%)");
+
+	document.addEventListener("keydown",function(event){
+	  if (!isdone){
+		done();
+		isdone=true;
+	  }
+	});
  }
 
 function done(){
