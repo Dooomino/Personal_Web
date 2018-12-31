@@ -4,7 +4,7 @@ var smooth =[.50, 0.5, .71, 1];
 var colorWheel=[
     "rgb(231,29,53)",
     "rgb(47,41,79)",
-    "rgb(27 153 139)",
+    "rgb(27,153,139)",
     "rgb(232,212,77)",
     "rgb(244,96,56)"
 ];
@@ -12,7 +12,7 @@ var colorWheel=[
 function run(dur){
 	times.add({
 		targets: "body",
-		backgroundColor: "rgb(247, 180, 145)",
+		backgroundColor: "rgb(231,29,53)",
 		duration:dur,
 		delay:dur/2,
 		easing:smooth

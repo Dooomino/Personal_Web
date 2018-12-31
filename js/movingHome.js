@@ -29,15 +29,22 @@ function menuin(){
 		 delay: function(el,i){
 			 return 250*i;
 		 }
-      });
-	$("#menus").css("display",savedcss)
+      }).add({
+		targets:"#menus",
+		opacity:[0,1],
+		duration:10,
+        easing:"easeOutSine",
+	    complete:function(){
+	   		$("#menus").css("display",savedcss);
+		}
+	});
    	for(i=1;i<4;i++){
       c.add({
          targets:".menu"+i,
 		 opacity:[0,1],
          translateY:-10,
          duration:500,
-         easing:"easeOutSine",
+         easing:"easeOutSine"
       });
    }
    c.add({
@@ -47,7 +54,7 @@ function menuin(){
          easing:"easeOutSine",
          complete:function(){
             isdone=true;
-         }
+		 }
       });
  }
 
