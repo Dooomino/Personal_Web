@@ -1,0 +1,30 @@
+html,body{
+  display:flex;
+  margin: 0 5%;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#but-to,#lbut,.icon-back{
+  display: none;
+}
+
+.left-contain{
+  display: flex;
+  margin: 0 5%;
+}
+#menus{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%;
+  list-style: none;
+}
+
+.menu{
+  position: relative;
+  float: left;
+}
