@@ -11,7 +11,7 @@ $color5: rgba(70, 70, 85, 1);
 body {
   margin: 0 0;
   padding: 0 0;
-  /*  overflow-x: hidden;*/
+  overflow-x: hidden;
   font-family: "VT323", monospace;
   /*text case*/
   /*background-color: black;*/
