@@ -1,56 +1,86 @@
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, user-scalabel=no">
-        <link rel="icon" type="image/png" href="favicon.png" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <script type="text/javascript" src="js/anime.min.js"></script>
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <title>Dooomino's Half Floor Space</title>
-    </head>
-    <body>
-      <div id="Home">
-        <script type="text/javascript" src="js/movingHome.js"></script>
-		  <div id="cont">
-			<svg id="logo" viewBox="0 0 auto auto">
-				<style>
-					.cls-1,.cls-2,.cls-3 {stroke: #fff;stroke-width: 2px;}
-					.cls-1,.cls-2 {stroke-linecap: round;stroke-linejoin: round;}
-					.cls-2,.cls-3 {fill: none;}
-					.cls-3 {stroke-miterlimit: 10;}
-				</style>
-				<path id="d1" class="cls-2" d="M448.75693,304.74509A242.67163,242.67163,0,0,1,548.98886,501.40381c0,134.2052-108.79481,243-243,243s-243-108.7948-243-243,108.79481-243,243-243a241.90335,241.90335,0,0,1,142.76807,46.34128" transform="translate(-61.98886 -257.40381)" />
-				<line id="d2" class="cls-1" x1="199" y1="6.04818" x2="199" y2="344.04818" />
-				<line id="d3" class="cls-1" x1="198.56002" y1="19.90664" x2="110.5" y2="343.54818" />
-				<line id="d4" class="cls-1" x1="189.93713" y1="51.59784" x2="21.8992" y2="342.74022" />
-				<line id="d5" class="cls-1" x1="162.74244" y1="98.71533" x2="2.23026" y2="268.59673" />
-				<line id="d6" class="cls-3" x1="21.8992" y1="342.74022" x2="465.39872" y2="342.74022" />
-				<line id="d7" class="cls-1" x1="288.5" y1="343.54818" x2="288.5" y2="5.54818" />
-			</svg>
-		  </div>
-            <div id="title">
-                <div class="text text1 el">Hi</div>            
-                <div class="text text2 el">You are here</div>            
-                <div class="text text3 el">I am</div>
-                <div class="text text4 el">Dooomino</div>
-                <div class="text text5 el">And you are at...</div>
-            </div>
-            <div class="change">Dooomino's Half Floor Space</div>
 
-            <div>
-                <nav>
-                    <ul id="menus">
-                        <a class="menu1 menu" href="#" onclick="gotoWork()"><li>Works</li></a>
-                        <a class="menu2 menu" href="#" onclick="gotoMe()"><li>About Me</li></a>
-                        <a class="menu3 menu" href="https://github.com/Dooomino" target="_blank"><li>GitHub</li></a>
-                    </ul>
-                </nav>
-            </div>
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <script type="text/javascript" src="js/anime.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+  <title>Dooomino's Half Floor Space</title>
+</head>
+
+<body>
+
+  <div id="Home">
+    <script type="text/javascript" src="js/movingHome.js"></script>
+    <div id="cont">
+      <svg id="logo" viewBox="0 0 200 200">
+        <style>
+          .cls-1,
+          .cls-2,
+          .cls-3 {
+            stroke: #fff;
+            stroke-width: 2px;
+          }
+
+          .cls-1,
+          .cls-2 {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+
+          .cls-2,
+          .cls-3 {
+            fill: none;
+          }
+
+          .cls-3 {
+            stroke-miterlimit: 10;
+          }
+        </style>
+        <path id="d1" class="cls-2" d="M448.75693,304.74509A242.67163,242.67163,0,0,1,548.98886,501.40381c0,134.2052-108.79481,243-243,243s-243-108.7948-243-243,108.79481-243,243-243a241.90335,241.90335,0,0,1,142.76807,46.34128" transform="translate(-61.98886 -257.40381)" />
+        <line id="d2" class="cls-1" x1="199" y1="6.04818" x2="199" y2="344.04818" />
+        <line id="d3" class="cls-1" x1="198.56002" y1="19.90664" x2="110.5" y2="343.54818" />
+        <line id="d4" class="cls-1" x1="189.93713" y1="51.59784" x2="21.8992" y2="342.74022" />
+        <line id="d5" class="cls-1" x1="162.74244" y1="98.71533" x2="2.23026" y2="268.59673" />
+        <line id="d6" class="cls-3" x1="21.8992" y1="342.74022" x2="465.39872" y2="342.74022" />
+        <line id="d7" class="cls-1" x1="288.5" y1="343.54818" x2="288.5" y2="5.54818" />
+      </svg>
     </div>
-        <div id="powered"><p>Terms of use: <br/>This website is powered by:
-                    <br/><a href="http://animejs.com/" target="_blank">Anime.js</a> | <a href="http://fontawesome.com/" target="_blank">Font Awesome</a> | <a  href="https://jquery.com/" target="_blank">JQuery</a> | <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Open Sans</a>
-                    <br/>All upon usage are licensed under a <a  href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank"> <i class="fab fa-creative-commons"></i> Creative Commons License.</a>
-            </p>
-        </div>
-    </body>
+    <div id="title">
+      <div class="text text1 el">Hi</div>
+      <div class="text text2 el">You are here</div>
+      <div class="text text3 el">I am</div>
+      <div class="text text4 el">Dooomino</div>
+      <div class="text text5 el">And you are at...</div>
+    </div>
+    <div class="change">Dooomino's Half Floor Space</div>
+
+    <div id="menu-cont">
+      <div id="menus">
+        <a class="menu1 menu" href="#" onclick="gotoWork()">
+          <div>Works</div>
+        </a>
+        <a class="menu2 menu" href="#" onclick="gotoMe()">
+          <div>About Me</div>
+        </a>
+        <a class="menu3 menu" href="https://github.com/Dooomino" target="_blank">
+          <div>GitHub</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="powered">
+    <p>Terms of use:
+      <br />This website is powered by:
+      <br /><a href="http://animejs.com/" target="_blank">Anime.js</a> | <a href="http://fontawesome.com/" target="_blank">Font Awesome</a> | <a href="https://jquery.com/" target="_blank">JQuery</a> | <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Open Sans</a>
+      <br />All upon usage are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank"> <i class="fab fa-creative-commons"></i> Creative Commons License.</a>
+    </p>
+  </div>
+</body>
+
 </html>
