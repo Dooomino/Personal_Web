@@ -161,6 +161,12 @@ li.menu0 {
   animation: main-cont-open 0.5s cubic-bezier(.27, .59, .57, .97) 1;
 }
 
+.img-contain {
+  position: relative;
+  width: 1%;
+  height: 500px;
+}
+
 /*Animations*/
 
 @keyframes menu-but-open {
