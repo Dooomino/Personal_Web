@@ -6,6 +6,9 @@ var colors = [
   'rgb(70, 70, 85, 1)'
 ];
 
+var deviceWidth = window.innerWidth;
+$('.heads :header').after('<hr class = "heads-line" />');
+
 
 function toggleBars() {
   $("#icon-back").toggleClass("active");
@@ -27,14 +30,19 @@ function goto(el) {
   $('body,html').stop().animate({
     scrollTop: $(id).offset().top
   }, 500);
+
+  if (deviceWidth < 960) {
+    $("#icon-back").removeClass("active");
+    $("#left-contain").removeClass("active");
+    $("#main-contain").removeClass("active");
+    $("#menus").removeClass("active");
+  }
 }
 
 
 window.onload = function () {
-  var deviceWidth = window.innerWidth;
+  $('#header hr').addClass("active");
   if (deviceWidth > 960) {
-    $('.heads :header').after('<hr class = "heads-line" />');
-    $('#header hr').addClass("active");
 
     $('.heads-text p').each(function (i, el) {
       c = colors.length % (i + 1);
@@ -56,7 +64,7 @@ window.addEventListener('mousemove', function (event) {
     $("#main-contain").addClass("active");
     $("#menus").addClass("active");
   } else {
-    if(y >= 0.1 * deviceHeight){
+    if (y >= 0.1 * deviceHeight) {
       $("#icon-back").removeClass("active");
       $("#left-contain").removeClass("active");
       $("#main-contain").removeClass("active");

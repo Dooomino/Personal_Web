@@ -1,30 +1,265 @@
-html,body{
-  display:flex;
-  margin: 0 5%;
+/*
+$color1: rgba(201, 222, 214, 1);
+$color2: rgba(132, 172, 206, 1);
+$color3: rgba(126, 189, 195, 1);
+$color4: rgba(6, 141, 157, 1);
+$color5: rgba(70, 70, 85, 1);
+*/
+
+
+/*Globals*/
+body {
+  margin: 0 0;
+  padding: 0 0;
+  overflow-x: hidden;
+  font-family: "VT323", monospace;
+  /*text case*/
+  /*background-color: black;*/
 }
-a{
+
+a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-#but-to,#lbut,.icon-back{
-  display: none;
-}
-
-.left-contain{
-  display: flex;
-  margin: 0 5%;
-}
-#menus{
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  float: left;
-  width: 100%;
+li {
   list-style: none;
 }
 
-.menu{
+/*Details*/
+#icon-back {
+  z-index: 999;
+  position: absolute;
+  display: flex;
+  background-color: black;
+  width: 5vh;
+  height: 5vh;
+  left: 2vw;
+  top: 1vh;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  animation: menu-but-close 0.6s cubic-bezier(.27, .59, .57, .97) 1;
+
+}
+
+#icon-back.active {
+  left: 46vw;
+  background-color: rgba(201, 222, 214, 1);
+  animation: menu-but-open 0.6s cubic-bezier(.27, .59, .57, .97) 1;
+}
+
+#icon-back > .fas {
   position: relative;
-  float: left;
+  left: 0;
+  color: white;
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+}
+
+#fixed-cont {
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+#left-contain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0vw;
+  background-color: rgba(201, 222, 214, 1);
+  overflow: hidden;
+  animation: menu-cont-close 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+}
+
+#left-contain.active {
+  width: 50vw;
+  animation: menu-cont-open 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+}
+
+#menus {
+  position: relative;
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 50%;
+  top: 10%;
+  left: 0;
+  padding: 20%;
+  margin: 0;
+  text-shadow: 1px 1px 1px black;
+}
+
+.menu {
+  position: relative;
+  margin: 3rem 0;
+  font-size: 5vw;
+  text-align: center;
+}
+
+.heads {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.heads-line {
+  position: relative;
+  width: 1vw;
+  height: 0vh;
+  background-color: black;
+  animation: line-out 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+.heads-line.active {
+  width: 10vw;
+  height: 1vh;
+  animation: line-in 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+.heads-text {
+  position: relative;
+  left: 0;
+  width: 100%;
+  font-size: 3vh;
+  align-content: center;
+  text-align: center;
+  height: auto;
+}
+
+.heads-text p {
+  position: relative;
+  width: 80%;
+  margin: 10px 10%;
+  border-radius: 10px;
+}
+
+li.menu0 {
+  font-size: calc(0.5+2)vw;
+}
+
+#main-contain {
+  position: absolute;
+  left: 0vw;
+  width: 100%;
+  animation: main-cont-close 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+}
+
+#main-contain.active {
+  left: 50vw;
+  animation: main-cont-open 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+}
+
+.img-contain {
+  position: relative;
+  width: 1%;
+  height: 500px;
+}
+
+/*Animations*/
+
+@keyframes menu-but-open {
+  0% {
+    left: 2vw;
+    background-color: black;
+  }
+
+  50% {
+    background-color: rgba(201, 222, 214, 0);
+  }
+
+  100% {
+    left: 46vw;
+  }
+}
+
+@keyframes menu-but-close {
+  from {
+    background-color: rgba(201, 222, 214, 0);
+    left: 46vw;
+  }
+
+  to {
+    left: 2vw;
+    background-color: black;
+  }
+}
+
+@keyframes menu-cont-open {
+  from {
+    width: 0vw;
+  }
+
+  to {
+    width: 50vw;
+  }
+}
+
+
+@keyframes menu-cont-close {
+  from {
+    width: 50vw;
+  }
+
+  to {
+    width: 0vw;
+  }
+}
+
+@keyframes main-cont-open {
+  from {
+    left: 0vw;
+  }
+
+  to {
+    left: 50vw;
+  }
+}
+
+@keyframes main-cont-close {
+  from {
+    left: 50vw;
+  }
+
+  to {
+    left: 0vw;
+  }
+}
+
+
+@keyframes line-in {
+  from {
+    width: 1vw;
+    height: 0vh;
+  }
+
+  to {
+    width: 10vw;
+    height: 1vh;
+  }
+}
+
+@keyframes line-out {
+  from {
+    width: 10vw;
+    height: 1vh;
+  }
+
+  to {
+    width: 1vw;
+    height: 0vh;
+  }
 }
