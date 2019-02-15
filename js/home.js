@@ -98,12 +98,12 @@ function Tmove(ent) {
   dify = yn - yi;
   console.log(difx, dify);
 
-  if (difx > 10) {
+  if (difx > 10 && Math.abs(dify) < 5) {
     $("#icon-back").addClass("active");
     $("#left-contain").addClass("active");
     $("#main-contain").addClass("active");
     $("#menus").addClass("active");
-  } else if (difx < -10) {
+  } else if (difx < -10 && Math.abs(dify) > 5) {
     $("#icon-back").removeClass("active");
     $("#left-contain").removeClass("active");
     $("#main-contain").removeClass("active");
