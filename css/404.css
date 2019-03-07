@@ -72,35 +72,59 @@ body {
   }
 }
 
-#behind {
+.init {
   position: relative;
   top: 50%;
-  left: -30%;
+  left: -100%;
   width: 800px;
   height: 800px;
   border-radius: 50%;
   background-image: linear-gradient(150deg, #f2a935 20%, #261905 80%);
-  animation: behin 1s cubic-bezier(.43, .85, .58, 1) 1;
+  animation: behin 2s cubic-bezier(.43, .85, .58, 1) 1;
   animation-delay: 0.7s;
   animation-fill-mode: both;
+}
+
+.behind.load {
+  position: relative;
+  top: 50%;
+  left: -10%;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-image: linear-gradient(150deg, #f2a935 20%, #261905 80%);
+  animation: bewonder 2s cubic-bezier(.5, .0, .5, 1.0) infinite;
+  x animation-fill-mode: both;
+  animation-direction: alternate;
 }
 
 @keyframes behin {
   from {
     opacity: 0;
-    left: -40%;
-    top;
-    90%;
+    left: -100%;
+    top: 90%;
+    transform: translateY(10%) scale(0);
   }
 
   to {
     opacity: 1;
-    left: -30%;
+    left: -10%;
     top: 50%;
+    transform: translateY(-30%) scale(1);
   }
 }
 
-#front {
+@keyframes bewonder {
+  from {
+    transform: translateY(-30%);
+  }
+
+  to {
+    transform: translateY(-35%);
+  }
+}
+
+.init {
   position: absolute;
   top: 60%;
   left: 60%;
@@ -110,6 +134,19 @@ body {
   background-image: linear-gradient(150deg, #356ff2 20%, #182a53 80%);
   animation: fohin 1s cubic-bezier(.43, .85, .58, 1) 1;
   animation-delay: 0.8s;
+  animation-fill-mode: both;
+}
+
+.load {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-image: linear-gradient(150deg, #356ff2 20%, #182a53 80%);
+  animation: fowander 2s cubic-bezier(.5, .0, .5, 1.0) infinite;
+  animation-direction: alternate;
   animation-fill-mode: both;
 }
 
@@ -125,6 +162,16 @@ body {
     opacity: 1;
     left: 60%;
     top: 60%;
+  }
+}
+
+@keyframes fowander {
+  from {
+    top: 60%;
+  }
+
+  to {
+    top: 65%;
   }
 }
 

@@ -1,27 +1,40 @@
 <html>
-	<head>
+
+<head>
   <link rel="stylesheet" type="text/css" href="css/404.css">
   <link rel="stylesheet" type="text/css" href="/Errors/css/404.css">
-  <!--  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <title>404 Not Found</title>
 </head>
 
 <body>
+  <script type="text/javascript">
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById("behind").classList.remove("init");
+        document.getElementById("behind").classList.add("load");
+        document.getElementById("front").classList.remove("init");
+        document.getElementById("front").classList.add("load");
+      }, 3000);
+    }
+  </script>
   <div id="coun">
-    <div id="behind"></div>
-    <div id="front"></div>
+    <div id="behind" class="init behind"></div>
+    <div id="front" class="inti front"></div>
   </div>
   <div id="return">
     <a id="backButton" href="/index/">
       <img src="/Errors/img/earth.png">
+      <!--      <img src="img/earth.png">-->
       <h2>Return Home</h2>
     </a>
   </div>
   <div id="misimgcontainer">
-    <h1 id="title">Oh.... 404<br>hmmmm... Hold on, going to Find website on other Plante...</h1>
+    <h1 id="title">Oh.... 404<br>hmmmm... Hold on. I'm going to fetch website from other Planet...</h1>
     <img id="missing" src="/Errors/img/missing.png" />
+    <!--    <img id="missing" src="img/missing.png" />-->
 
   </div>
 </body>
-	
+
 </html>
