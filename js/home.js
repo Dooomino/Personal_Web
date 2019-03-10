@@ -51,8 +51,36 @@ window.onload = function () {
     })
 
     window.addEventListener('mousemove', hoverborder);
-
   }
+  m = [];
+  $.get("https://api.github.com/users/dooomino/repos")
+    .done(function (res, rqs) {
+      for (i = 0; i < res.length; i++) {
+        m.push({
+          "name": res[i].name,
+          "url": res[i].svn_url,
+          "time": res[i].pushed_at.substring(0, 10),
+          "descript": res[i].description,
+          "j": res[i]
+        });
+      }
+      m.sort(function (a, b) {
+        return Date.parse(b.time) - Date.parse(a.time);
+      })
+
+
+      for (i = 0; i < m.length; i++) {
+        if (!/CSCI/.test(m[i].name)) {
+          if (!m[i].j.private && !m[i].j.fork) {
+            $("#gits ul").append('<a class="repos" href="' + m[i].url + '" target="_blank"><li>' + m[i].name + '<p>' +
+              m[i].descript + '</p></li></a>');
+
+          }
+        }
+      }
+    });
+
+
 }
 
 
@@ -121,14 +149,14 @@ function hoverborder(event) {
   y = event.clientY;
   deviceWidth = window.innerWidth;
   deviceHeight = window.innerHeight;
-  if (x <= 0.2 * deviceWidth &
+  if (x <= 0.03 * deviceWidth &
     y >= 0.1 * deviceHeight) {
 
     $("#icon-back").addClass("active");
     $("#left-contain").addClass("active");
     $("#main-contain").addClass("active");
     $("#menus").addClass("active");
-  } else {
+  } else if (x > 0.2 * deviceWidth) {
     if (y >= 0.1 * deviceHeight) {
       $("#icon-back").removeClass("active");
       $("#left-contain").removeClass("active");

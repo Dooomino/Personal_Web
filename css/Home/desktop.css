@@ -18,6 +18,7 @@ body {
 }
 
 a {
+  z-index: 9999;
   text-decoration: none;
   color: white;
 }
@@ -33,7 +34,7 @@ li {
   display: flex;
   background-color: black;
   width: 6vh;
-  height: 5vh;
+  height: 6vh;
   left: 2vw;
   top: 1vh;
   align-items: center;
@@ -47,7 +48,6 @@ li {
 
 #icon-back.active {
   left: 16vw;
-  background-color: rgba(201, 222, 214, 1);
   animation: menu-but-open 0.6s cubic-bezier(.27, .59, .57, .97) 1;
 }
 
@@ -62,8 +62,9 @@ li {
 
 #fixed-cont {
   display: inline-block;
+  z-index: 0;
   position: fixed;
-  width: 100%;
+  /*  width: 100%;*/
   height: 100%;
   left: 0;
   top: 0;
@@ -107,7 +108,6 @@ li {
   width: 100%;
   height: 100%;
   text-align: center;
-  pointer-events: none;
 }
 
 .heads-line {
@@ -150,6 +150,7 @@ li.menu0 {
 }
 
 #main-contain {
+  z-index: 0;
   position: absolute;
   left: 0vw;
   width: 100%;
@@ -167,29 +168,58 @@ li.menu0 {
   height: 500px;
 }
 
+#gits {
+  z-index: 9999;
+  min-height: 100vh;
+  font-size: 3vw;
+  background-image: linear-gradient(rgba(100, 100, 100), rgb(25, 25, 25));
+  box-shadow: inset 1vh 2vw 50vh 2vw black;
+  color: white;
+}
+
+#gits ul {
+  padding: 0;
+  margin: 0;
+}
+
+#gits p {
+  font-size: 1.5vw;
+}
+
+#gits .heads-line {
+  background-color: white;
+}
+
+.repos {
+  padding: 0;
+  font-size: 2vw;
+}
+
+.repos li {
+  margin: 5vh 40vh;
+  border-bottom: solid 2px white;
+}
+
+
 /*Animations*/
 
 @keyframes menu-but-open {
   from {
     left: 2vw;
-    background-color: black;
   }
 
   to {
     left: 16vw;
-    background-color: rgba(201, 222, 214, 0);
   }
 }
 
 @keyframes menu-but-close {
   from {
-    background-color: rgba(201, 222, 214, 0);
     left: 16vw;
   }
 
   to {
     left: 2vw;
-    background-color: black;
   }
 }
 
