@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+    background-color: black;
+    font-family: 'Open Sans',sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#contain{
+    position:absolute;
+    float: left;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    line-height: 100%;
+    transform: rotateX(60deg);
+    margin: 0;
+    padding: 0;
+}
+#containp{
+    position:absolute;
+    float: left;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#planet{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    transform: rotateX(0);
+    opacity: 0.6;
+}
+
+#ring{
+    position: absolute;
+    top:30%;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-style:solid  ;
+    border-color: aquamarine;
+    border-width: 5px;
+    opacity: 0.7;
+    margin: 0;
+    padding: 0;
+}
+.moon{
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+#moon1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    animation: rotate1 2s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+#moon1 div{
+    position: absolute;
+    top:-8%;
+    height: 25px;
+    background-color: aqua;
+    width: 25px;
+
+}
+
+#ring2{
+    position: absolute;
+    top:25%;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border-style:solid  ;
+    border-color:chocolate;
+    border-width: 5px;
+    opacity: 0.7;
+    margin: 0;
+    padding: 0;
+}
+
+#moon2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    animation: rotate2 4s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+#moon2 div{
+    position: absolute;
+    background-color:blueviolet;
+    top:-5%;
+    height: 25px;
+    width: 25px;
+}
+
+#ring3{
+    position: absolute;
+    top:20%;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border-style:solid  ;
+    border-color:#ffea78;
+    border-width: 5px;
+    opacity: 0.7;
+    margin: 0;
+    padding: 0;
+}
+
+#moon3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    animation: rotate3 8s cubic-bezier(0, 0, 1, 1) infinite;
+}
+
+#moon3 div{
+    position: absolute;
+    background-color:#ff9031;
+    top:-5%;
+    height: 25px;
+    width: 25px;
+}
+
+@keyframes rotate1{
+    0%  {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes rotate2{
+    0%  {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes rotate3{
+    0%  {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+
+#upper{
+    position:absolute;
+    top: 35%;
+    height: 80px;
+    width: 160px;
+    background-color: #ff5800;
+    border-top-left-radius:  160px;
+    border-top-right-radius: 160px;
+    z-index: 999;
+    box-shadow: 0px 0px 10px 10px #ff5800;
+}
+#lower{
+    position:absolute;
+    top: calc(35% + 80px);
+    height: 80px;
+    width: 160px;
+    background-color: #ff5800;
+    border-bottom-left-radius:  160px;
+    border-bottom-right-radius: 160px;
+    box-shadow: 0px 0px 10px 10px #ff5800;
+}

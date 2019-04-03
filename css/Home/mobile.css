@@ -12,16 +12,13 @@ body {
   margin: 0 0;
   padding: 0 0;
   overflow-x: hidden;
-  width: 100%;
   font-family: "VT323", monospace;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   /*text case*/
   /*background-color: black;*/
 }
 
 a {
+  z-index: 9999;
   text-decoration: none;
   color: white;
 }
@@ -31,6 +28,14 @@ li {
 }
 
 /*Details*/
+.logo {
+  display: inline-block;
+  position: relative;
+  align-content: center;
+  text-align: center;
+  padding: 20%;
+}
+
 #icon-back {
   z-index: 999;
   position: absolute;
@@ -50,9 +55,9 @@ li {
 }
 
 #icon-back.active {
-  left: 46vw;
-  background-color: rgba(201, 222, 214, 1);
+  left: 37.5vw;
   animation: menu-but-open 0.6s cubic-bezier(.27, .59, .57, .97) 1;
+  background-color: rgba(201, 222, 214, 1);
 }
 
 #icon-back > .fas {
@@ -66,8 +71,9 @@ li {
 
 #fixed-cont {
   display: inline-block;
+  z-index: 0;
   position: fixed;
-  width: 100%;
+  /*  width: 100%;*/
   height: 100%;
   left: 0;
   top: 0;
@@ -85,7 +91,7 @@ li {
 }
 
 #left-contain.active {
-  width: 50vw;
+  width: 40vw;
   animation: menu-cont-open 0.5s cubic-bezier(.27, .59, .57, .97) 1;
 }
 
@@ -94,18 +100,24 @@ li {
   overflow-x: hidden;
   white-space: nowrap;
   width: 50%;
-  top: 10%;
-  left: 0;
-  padding: 20%;
+  top: 30%;
   margin: 0;
   text-shadow: 1px 1px 1px black;
 }
 
 .menu {
   position: relative;
-  margin: 3rem 0;
-  font-size: 5vw;
+  margin: 1rem 0;
+  font-size: 4vw;
   text-align: center;
+}
+
+li.menu0 {
+  font-size: 5vw;
+}
+
+#header p {
+  font-size: 5vw;
 }
 
 .heads {
@@ -113,7 +125,6 @@ li {
   width: 100%;
   height: 100%;
   text-align: center;
-  pointer-events: none;
 }
 
 .heads-line {
@@ -131,7 +142,7 @@ li {
   height: 1vh;
   animation: line-in 0.5s cubic-bezier(.27, .59, .57, .97) 1;
   animation-fill-mode: both;
-  animation-delay: 0.5s;
+  animation-delay: 1.9s;
 }
 
 .heads-text {
@@ -151,11 +162,13 @@ li {
   border-radius: 10px;
 }
 
-li.menu0 {
-  font-size: calc(0.5+2)vw;
+
+.dark {
+  background-color: #272727;
 }
 
 #main-contain {
+  z-index: 0;
   position: absolute;
   left: 0vw;
   width: 100%;
@@ -163,7 +176,7 @@ li.menu0 {
 }
 
 #main-contain.active {
-  left: 50vw;
+  left: 20vw;
   animation: main-cont-open 0.5s cubic-bezier(.27, .59, .57, .97) 1;
 }
 
@@ -173,32 +186,57 @@ li.menu0 {
   height: 500px;
 }
 
+#gits {
+  min-height: 100vh;
+  font-size: 5vw;
+  color: #ffffff;
+  background-color: #272727;
+}
+
+#gits ul {
+  padding: 0;
+  margin: 0;
+}
+
+#gits .heads-line {
+  background-color: white;
+}
+
+.repos {
+  padding: 0;
+  font-size: 5vw;
+}
+
+.repos li {
+  margin: 5vh 0;
+  border-bottom: solid 2px white;
+}
+
+#gits p {
+  font-size: 3vw;
+}
+
 /*Animations*/
 
 @keyframes menu-but-open {
-  0% {
+  from {
     left: 2vw;
-    background-color: black;
   }
 
-  50% {
-    background-color: rgba(201, 222, 214, 0);
-  }
-
-  100% {
-    left: 46vw;
+  to {
+    left: 37.5vw;
+    background-color: rgba(201, 222, 214, 1);
   }
 }
 
 @keyframes menu-but-close {
   from {
-    background-color: rgba(201, 222, 214, 0);
-    left: 46vw;
+    left: 37.5vw;
+    background-color: rgba(201, 222, 214, 1);
   }
 
   to {
     left: 2vw;
-    background-color: black;
   }
 }
 
@@ -208,14 +246,14 @@ li.menu0 {
   }
 
   to {
-    width: 50vw;
+    width: 40vw;
   }
 }
 
 
 @keyframes menu-cont-close {
   from {
-    width: 50vw;
+    width: 40vw;
   }
 
   to {
@@ -229,13 +267,13 @@ li.menu0 {
   }
 
   to {
-    left: 50vw;
+    left: 20vw;
   }
 }
 
 @keyframes main-cont-close {
   from {
-    left: 50vw;
+    left: 20vw;
   }
 
   to {
