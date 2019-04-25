@@ -69,31 +69,17 @@ window.onload = function () {
         }
       }
     });
-  $('.heads-text p').each(function (i, el) {
-    c = colors.length % (i + 1);
-    el.style.backgroundColor = colors[c];
-  });
   if (deviceWidth > 960) {
-    $('.menu0').html("Half Floor Space");
     window.addEventListener('mousemove', hoverborder);
-  } else {
-    $('.menu0').html("Dooomino");
   }
 }
 
 
 window.onresize = function () {
   deviceWidth = document.documentElement.clientWidth;
-  $('.heads-text p').each(function (i, el) {
-    c = colors.length % (i + 1);
-    el.style.backgroundColor = colors[c];
-  });
   if (deviceWidth > 960) {
-    $('.menu0').html("Half Floor Space");
-
     window.addEventListener('mousemove', hoverborder);
   } else {
-    $('.menu0').html("Dooomino");
     window.removeEventListener('mousemove', hoverborder);
     window.addEventListener('touchstart', Tstart);
     window.addEventListener('touchmove', Tmove);

@@ -12,7 +12,7 @@ body {
   margin: 0 0;
   padding: 0 0;
   overflow-x: hidden;
-  font-family: "VT323", monospace;
+  font-family: "Work Sans", monospace;
   /*text case*/
   /*background-color: black;*/
 }
@@ -100,7 +100,7 @@ li {
   overflow-x: hidden;
   white-space: nowrap;
   width: 50%;
-  top: 30%;
+  top: 20%;
   margin: 0;
   text-shadow: 1px 1px 1px black;
 }
@@ -108,17 +108,42 @@ li {
 .menu {
   position: relative;
   margin: 1rem 0;
-  font-size: 4vw;
+  font-size: 2.5vw;
   text-align: center;
 }
 
 li.menu0 {
-  font-size: 5vw;
+  font-size: 4vw;
+}
+
+/* Main */
+
+#header {
+  color: white;
+  background-color: black;
+}
+
+#header h1 {
+  margin-top: 0;
+  padding: 2em 0 0 0;
+  font-size: 8vh;
+}
+
+#highlight {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 #header p {
   font-size: 5vw;
 }
+
+#highlight img {
+  object-fit: cover;
+  width: 100%;
+}
+
 
 .heads {
   position: relative;
@@ -135,6 +160,10 @@ li.menu0 {
   animation: line-out 0.5s cubic-bezier(.27, .59, .57, .97) 1;
   animation-fill-mode: both;
   animation-delay: 0.5s;
+}
+
+#header .heads-line {
+  background-color: white;
 }
 
 .heads-line.active {

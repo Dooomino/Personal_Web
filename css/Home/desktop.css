@@ -12,7 +12,7 @@ body {
   margin: 0 0;
   padding: 0 0;
   overflow-x: hidden;
-  font-family: "VT323", monospace;
+  font-family: "Work Sans", monospace;
   /*text case*/
   /*background-color: black;*/
 }
@@ -28,6 +28,8 @@ li {
 }
 
 /*Details*/
+
+/*Left bar*/
 .logo {
   display: inline-block;
   position: relative;
@@ -99,7 +101,7 @@ li {
   overflow-x: hidden;
   white-space: nowrap;
   width: 50%;
-  top: 40%;
+  top: 30%;
   margin: 0;
   text-shadow: 1px 1px 1px black;
 }
@@ -107,12 +109,40 @@ li {
 .menu {
   position: relative;
   margin: 1rem 0;
-  font-size: 2vw;
+  font-size: 1.5vw;
   text-align: center;
 }
 
+li.menu0 {
+  font-size: 2vw;
+}
+
+/*Main*/
+
+#header {
+  color: white;
+  background-color: black;
+}
+
+#header h1 {
+  margin-top: 0;
+  padding: 2em 0 0 0;
+  font-size: 8vh;
+}
+
 #header p {
-  font-size: 10vh;
+  font-size: 5vh;
+}
+
+#highlight {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#highlight img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .heads {
@@ -130,6 +160,10 @@ li {
   animation: line-out 0.5s cubic-bezier(.27, .59, .57, .97) 1;
   animation-fill-mode: both;
   animation-delay: 0.5s;
+}
+
+#header .heads-line {
+  background-color: white;
 }
 
 .heads-line.active {
@@ -155,10 +189,7 @@ li {
   width: 80%;
   margin: 10px 10%;
   border-radius: 10px;
-}
-
-li.menu0 {
-  font-size: 1.5vw;
+  text-align: left;
 }
 
 .dark {
