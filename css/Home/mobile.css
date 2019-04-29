@@ -1,39 +1,19 @@
 /*
-$color1: rgba(201, 222, 214, 1);
-$color2: rgba(132, 172, 206, 1);
-$color3: rgba(126, 189, 195, 1);
-$color4: rgba(6, 141, 157, 1);
-$color5: rgba(70, 70, 85, 1);
+color1: rgba(201, 222, 214, 1);
+color2: rgba(132, 172, 206, 1);
+color3: rgba(126, 189, 195, 1);
+color4: rgba(6, 141, 157, 1);
+color5: rgba(70, 70, 85, 1);
 */
 
 
-/*Globals*/
-body {
-  margin: 0 0;
-  padding: 0 0;
-  overflow-x: hidden;
-  font-family: "Work Sans", monospace;
-  /*text case*/
-  /*background-color: black;*/
-}
-
-a {
-  z-index: 9999;
-  text-decoration: none;
-  color: white;
-}
-
-li {
-  list-style: none;
-}
-
 /*Details*/
 .logo {
-  display: inline-block;
-  position: relative;
-  align-content: center;
   text-align: center;
-  padding: 20%;
+}
+
+.logo img {
+  width: 80%;
 }
 
 #icon-back {
@@ -51,7 +31,6 @@ li {
   vertical-align: middle;
   border-radius: 50%;
   animation: menu-but-close 0.6s cubic-bezier(.27, .59, .57, .97) 1;
-
 }
 
 #icon-back.active {
@@ -85,7 +64,7 @@ li {
   top: 0;
   height: 100%;
   width: 0vw;
-  background-color: rgba(201, 222, 214, 1);
+  background-color: #0A1D55;
   overflow: hidden;
   animation: menu-cont-close 0.5s cubic-bezier(.27, .59, .57, .97) 1;
 }
@@ -108,12 +87,13 @@ li {
 .menu {
   position: relative;
   margin: 1rem 0;
-  font-size: 2.5vw;
+  font-size: 2.5vh;
   text-align: center;
 }
 
 li.menu0 {
   font-size: 4vw;
+  margin-bottom: 20%;
 }
 
 /* Main */
@@ -131,7 +111,7 @@ li.menu0 {
 
 #highlight {
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   overflow: hidden;
 }
 
@@ -165,6 +145,11 @@ li.menu0 {
 #header .heads-line {
   background-color: white;
 }
+
+.heads h2 {
+  font-size: 5vh;
+}
+
 
 .heads-line.active {
   width: 10vw;
@@ -215,9 +200,33 @@ li.menu0 {
   height: 500px;
 }
 
+
+/*Work*/
+.workClass {
+  position: relative;
+  width: 100%;
+  min-height: 20vh;
+  animation: workClass-fade-out 1s cubic-bezier(.29, .98, .58, 1) 1;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+.workClass h {
+  margin: 0;
+  font-size: 4vh;
+  line-height: 20vh;
+}
+
+.workClass:hover {
+  animation: workClass-fade-in 0.5s cubic-bezier(.29, .98, .58, 1) 1;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+/*gits*/
+
 #gits {
   min-height: 100vh;
-  font-size: 5vw;
   color: #ffffff;
   background-color: #272727;
 }
@@ -310,6 +319,25 @@ li.menu0 {
   }
 }
 
+@keyframes workClass-fade-in {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes workClass-fade-out {
+  from {
+    transform: scale(0.95);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
 
 @keyframes line-in {
   from {

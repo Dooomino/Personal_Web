@@ -7,35 +7,15 @@ $color5: rgba(70, 70, 85, 1);
 */
 
 
-/*Globals*/
-body {
-  margin: 0 0;
-  padding: 0 0;
-  overflow-x: hidden;
-  font-family: "Work Sans", monospace;
-  /*text case*/
-  /*background-color: black;*/
-}
-
-a {
-  z-index: 9999;
-  text-decoration: none;
-  color: white;
-}
-
-li {
-  list-style: none;
-}
-
 /*Details*/
 
 /*Left bar*/
 .logo {
-  display: inline-block;
-  position: relative;
-  align-content: center;
   text-align: center;
-  padding: 25%;
+}
+
+.logo img {
+  width: 80%;
 }
 
 #icon-back {
@@ -86,7 +66,7 @@ li {
   top: 0;
   height: 100%;
   width: 0vw;
-  background-color: rgba(201, 222, 214, 1);
+  background-color: #0A1D55;
   overflow: hidden;
   animation: menu-cont-close 0.5s cubic-bezier(.27, .59, .57, .97) 1;
 }
@@ -130,14 +110,14 @@ li.menu0 {
   font-size: 8vh;
 }
 
-#header p {
-  font-size: 5vh;
-}
-
 #highlight {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+}
+
+#header p {
+  font-size: 5vh;
 }
 
 #highlight img {
@@ -148,7 +128,7 @@ li.menu0 {
 .heads {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 80%;
   text-align: center;
 }
 
@@ -164,6 +144,10 @@ li.menu0 {
 
 #header .heads-line {
   background-color: white;
+}
+
+.heads h2 {
+  font-size: 5vw;
 }
 
 .heads-line.active {
@@ -192,10 +176,6 @@ li.menu0 {
   text-align: left;
 }
 
-.dark {
-  background-color: #272727;
-}
-
 #main-contain {
   z-index: 0;
   position: absolute;
@@ -215,9 +195,31 @@ li.menu0 {
   height: 500px;
 }
 
+/*Work*/
+.workClass {
+  position: relative;
+  width: 100%;
+  min-height: 20vh;
+  animation: workClass-fade-out 1s cubic-bezier(.29, .98, .58, 1) 1;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+.workClass h {
+  margin: 0;
+  font-size: 4vh;
+  line-height: 20vh;
+}
+
+.workClass:hover {
+  animation: workClass-fade-in 0.5s cubic-bezier(.29, .98, .58, 1) 1;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+/*Gits*/
 #gits {
   min-height: 100vh;
-  font-size: 3vw;
   color: #ffffff;
   background-color: #272727;
 }
@@ -305,6 +307,26 @@ li.menu0 {
 
   to {
     left: 0vw;
+  }
+}
+
+@keyframes workClass-fade-in {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes workClass-fade-out {
+  from {
+    transform: scale(0.95);
+  }
+
+  to {
+    transform: scale(1);
   }
 }
 

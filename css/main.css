@@ -1,5 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
 @import url("Home/desktop.css") screen and (min-width: 961px);
 
 @import url("Home/mobile.css") screen and (max-width: 960px);
+
+/*Globals*/
+body {
+  margin: 0 0;
+  padding: 0 0;
+  overflow-x: hidden;
+  font-family: "Work Sans", monospace;
+}
+
+a {
+  z-index: 9999;
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}

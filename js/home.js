@@ -1,10 +1,18 @@
 var colors = [
-  'rgb(201, 222, 214, 1)',
-  'rgb(132, 172, 206, 1)',
-  'rgb(126, 189, 195, 1)',
-  'rgb(6, 141, 157, 1)',
-  'rgb(70, 70, 85, 1)'
+  "#112C59",
+  "#225889",
+  "#ffb690",
+  "#C0686B",
+  "#1F3646"
 ];
+
+
+
+//  'rgb(201, 222, 214, 1)',
+//  'rgb(132, 172, 206, 1)',
+//  'rgb(126, 189, 195, 1)',
+//  'rgb(6, 141, 157, 1)',
+//  'rgb(70, 70, 85, 1)'
 
 var deviceWidth = document.documentElement.clientWidth;
 $('.heads :header').after('<hr class = "heads-line" />');
@@ -58,13 +66,11 @@ window.onload = function () {
         return Date.parse(b.time) - Date.parse(a.time);
       })
 
-
       for (i = 0; i < m.length; i++) {
         if (!/CSCI/.test(m[i].name)) {
           if (!m[i].j.private && !m[i].j.fork) {
             $("#gits ul").append('<a class="repos" href="' + m[i].url + '" target="_blank"><li>' + m[i].name + '<p>' +
               m[i].descript + '</p></li></a>');
-
           }
         }
       }
@@ -72,8 +78,34 @@ window.onload = function () {
   if (deviceWidth > 960) {
     window.addEventListener('mousemove', hoverborder);
   }
+  setTypeColor();
+
 }
 
+function setTypeColor() {
+  $(".workClass").each(function (i, el) {
+    var c = (colors.length) % (i + 1);
+    $(el).css("background-color", colors[c]);
+    if (invertText(colors[c])) {
+      $(el).css("color", "white");
+    }
+  });
+}
+
+function invertText(bcolor) {
+  var hex = bcolor.replace('#', '');
+  var r = parseInt('0x' + hex.substr(0, 2));
+  var g = parseInt('0x' + hex.substr(2, 2));
+  var b = parseInt('0x' + hex.substr(4, 2));
+
+  var gs = (r * 0.299 + g * 0.587 + b * 0.114) / 255;
+  if (gs < 0.5) {
+    return true;
+  }
+
+  return false;
+  //  console.log(r, g, b, gs);
+}
 
 window.onresize = function () {
   deviceWidth = document.documentElement.clientWidth;
@@ -93,7 +125,7 @@ function Tstart(ent) {
 
   xi = t.clientX;
   yi = t.clientY;
-  console.log(xi, yi);
+  //  console.log(xi, yi);
 }
 
 var Ton = false;
@@ -106,7 +138,7 @@ function Tmove(ent) {
 
   difx = xn - xi;
   dify = yn - yi;
-  console.log(difx, dify);
+  //  console.log(difx, dify);
 
   if (difx > 10 && Math.abs(dify) < 5) {
     $("#icon-back").addClass("active");
@@ -136,7 +168,7 @@ function srcollAction() {
     if (diff < offsetPos) {
       var g = 50;
       var blend = 255 - diff / offsetPos * (255 - g);
-      console.log(blend)
+      //      console.log(blend)
       $("#main-contain").css("background-color", "rgb(" + blend + "," + blend + "," + blend + ")");
     }
   } else {
