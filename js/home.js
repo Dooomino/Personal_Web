@@ -51,7 +51,7 @@ function goto(el) {
 window.onload = function () {
   $('#header hr').addClass("active");
   m = [];
-  $.get("https://api.github.com/users/dooomino/repos")
+  $.get("https://api.github.com/users/dooomino/repos?per_page=1000&sort=newest")
     .done(function (res, rqs) {
       for (i = 0; i < res.length; i++) {
         m.push({
@@ -62,13 +62,14 @@ window.onload = function () {
           "j": res[i]
         });
       }
-      m.sort(function (a, b) {
-        return Date.parse(b.time) - Date.parse(a.time);
-      })
-
+      //      m.sort(function (a, b) {
+      //        return Date.parse(b.time) - Date.parse(a.time);
+      //      })
+      console.log(m);
       for (i = 0; i < m.length; i++) {
         if (!/CSCI/.test(m[i].name)) {
-          if (!m[i].j.private && !m[i].j.fork) {
+          //          !m[i].j.private &&
+          if (!m[i].j.fork) {
             $("#gits ul").append('<a class="repos" href="' + m[i].url + '" target="_blank"><li>' + m[i].name + '<p>' +
               m[i].descript + '</p></li></a>');
           }
@@ -154,7 +155,6 @@ function Tmove(ent) {
 
 }
 
-
 window.onscroll = srcollAction;
 
 function srcollAction() {
@@ -197,4 +197,13 @@ function hoverborder(event) {
       $("#menus").removeClass("active");
     }
   }
+}
+
+
+function contrExpand() {
+  $("#contracts").addClass("expand");
+}
+
+function contrRollup() {
+  $("#contracts").removeClass("expand");
 }

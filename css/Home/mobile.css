@@ -34,9 +34,9 @@ color5: rgba(70, 70, 85, 1);
 }
 
 #icon-back.active {
-  left: 37.5vw;
+  left: 35vw;
+  background-color: black;
   animation: menu-but-open 0.6s cubic-bezier(.27, .59, .57, .97) 1;
-  background-color: rgba(201, 222, 214, 1);
 }
 
 #icon-back > .fas {
@@ -87,7 +87,7 @@ color5: rgba(70, 70, 85, 1);
 .menu {
   position: relative;
   margin: 1rem 0;
-  font-size: 2.5vh;
+  font-size: 3.5vw;
   text-align: center;
 }
 
@@ -167,6 +167,7 @@ li.menu0 {
   align-content: center;
   text-align: center;
   height: auto;
+  min-height: 100vh;
 }
 
 .heads-text p {
@@ -176,10 +177,6 @@ li.menu0 {
   border-radius: 10px;
 }
 
-
-.dark {
-  background-color: #272727;
-}
 
 #main-contain {
   z-index: 0;
@@ -192,12 +189,6 @@ li.menu0 {
 #main-contain.active {
   left: 20vw;
   animation: main-cont-open 0.5s cubic-bezier(.27, .59, .57, .97) 1;
-}
-
-.img-contain {
-  position: relative;
-  width: 1%;
-  height: 500px;
 }
 
 
@@ -222,6 +213,49 @@ li.menu0 {
   animation-fill-mode: both;
   animation-direction: alternate;
 }
+
+
+/*contracts*/
+.contracts-title {
+  background-color: #3040ff;
+  width: 100%;
+  min-height: 20vh;
+}
+
+.contracts-title h {
+  color: white;
+  font-size: 5vw;
+  line-height: 20vh;
+  margin: 0;
+}
+
+#contracts {
+  background-color: #3040ff;
+  height: 0vh;
+  width: 100%;
+  overflow: hidden;
+  animation: ctr-rollup 1s cubic-bezier(.5, 1.0, .5, 1.0) 1;
+  margin-bottom: 40vh
+}
+
+#contracts p {
+  color: white;
+  font-size: 4vw;
+}
+
+#contracts .avatar {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#contracts.expand {
+  height: 40vh;
+  animation: ctr-exp 1s cubic-bezier(.0, .75, .6, 1) 1;
+}
+
+
+
+
 
 /*gits*/
 
@@ -262,15 +296,13 @@ li.menu0 {
   }
 
   to {
-    left: 37.5vw;
-    background-color: rgba(201, 222, 214, 1);
+    left: 35vw;
   }
 }
 
 @keyframes menu-but-close {
   from {
-    left: 37.5vw;
-    background-color: rgba(201, 222, 214, 1);
+    left: 35vw;
   }
 
   to {
@@ -359,6 +391,27 @@ li.menu0 {
 
   to {
     width: 1vw;
+    height: 0vh;
+  }
+}
+
+
+@keyframes ctr-exp {
+  from {
+    height: 0vh;
+  }
+
+  to {
+    height: 40vh;
+  }
+}
+
+@keyframes ctr-rollup {
+  from {
+    height: 40vh;
+  }
+
+  to {
     height: 0vh;
   }
 }

@@ -32,13 +32,13 @@ $color5: rgba(70, 70, 85, 1);
   justify-content: center;
   vertical-align: middle;
   border-radius: 50%;
-  animation: menu-but-close 0.6s cubic-bezier(.27, .59, .57, .97) 1;
+  animation: menu-but-close 0.6s cubic-bezier(.3, .6, .6, 1) 1;
 
 }
 
 #icon-back.active {
   left: 16vw;
-  animation: menu-but-open 0.6s cubic-bezier(.27, .59, .57, .97) 1;
+  animation: menu-but-open 0.6s cubic-bezier(.3, .6, .6, 1) 1;
 }
 
 #icon-back > .fas {
@@ -68,12 +68,12 @@ $color5: rgba(70, 70, 85, 1);
   width: 0vw;
   background-color: #0A1D55;
   overflow: hidden;
-  animation: menu-cont-close 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+  animation: menu-cont-close 0.5s cubic-bezier(.3, .6, .6, 1) 1;
 }
 
 #left-contain.active {
   width: 20vw;
-  animation: menu-cont-open 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+  animation: menu-cont-open 0.5s cubic-bezier(.3, .6, .6, 1) 1;
 }
 
 #menus {
@@ -137,7 +137,7 @@ li.menu0 {
   width: 1vw;
   height: 0vh;
   background-color: black;
-  animation: line-out 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+  animation: line-out 0.5s cubic-bezier(.3, .6, .6, 1) 1;
   animation-fill-mode: both;
   animation-delay: 0.5s;
 }
@@ -153,7 +153,7 @@ li.menu0 {
 .heads-line.active {
   width: 10vw;
   height: 1vh;
-  animation: line-in 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+  animation: line-in 0.5s cubic-bezier(.3, .6, .6, 1) 1;
   animation-fill-mode: both;
   animation-delay: 1.9s;
 }
@@ -166,6 +166,7 @@ li.menu0 {
   align-content: center;
   text-align: center;
   height: auto;
+  min-height: 100vh;
 }
 
 .heads-text p {
@@ -181,26 +182,21 @@ li.menu0 {
   position: absolute;
   left: 0vw;
   width: 100%;
-  animation: main-cont-close 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+  animation: main-cont-close 0.5s cubic-bezier(.3, .6, .6, 1) 1;
 }
 
 #main-contain.active {
   left: 20vw;
-  animation: main-cont-open 0.5s cubic-bezier(.27, .59, .57, .97) 1;
+  animation: main-cont-open 0.5s cubic-bezier(.3, .6, .6, 1) 1;
 }
 
-.img-contain {
-  position: relative;
-  width: 1%;
-  height: 500px;
-}
 
 /*Work*/
 .workClass {
   position: relative;
   width: 100%;
   min-height: 20vh;
-  animation: workClass-fade-out 1s cubic-bezier(.29, .98, .58, 1) 1;
+  animation: workClass-fade-out 1s cubic-bezier(.3, .1, .6, 1) 1;
   animation-fill-mode: both;
   animation-direction: alternate;
 }
@@ -212,9 +208,47 @@ li.menu0 {
 }
 
 .workClass:hover {
-  animation: workClass-fade-in 0.5s cubic-bezier(.29, .98, .58, 1) 1;
+  animation: workClass-fade-in 0.5s cubic-bezier(.3, 1, .6, 1) 1;
   animation-fill-mode: both;
   animation-direction: alternate;
+}
+
+/*contracts*/
+.contracts-title {
+  background-color: #3040ff;
+  width: 100%;
+  min-height: 20vh;
+}
+
+.contracts-title h {
+  color: white;
+  font-size: 5vh;
+  line-height: 20vh;
+  margin: 0;
+}
+
+#contracts {
+  background-color: #3040ff;
+  height: 0vh;
+  width: 100%;
+  overflow: hidden;
+  animation: ctr-rollup 1s cubic-bezier(.5, 1.0, .5, 1.0) 1;
+  margin-bottom: 40vh
+}
+
+#contracts p {
+  color: white;
+  font-size: 4vh;
+}
+
+#contracts .avatar {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#contracts.expand {
+  height: 40vh;
+  animation: ctr-exp 1s cubic-bezier(.0, .75, .6, 1) 1;
 }
 
 /*Gits*/
@@ -351,6 +385,26 @@ li.menu0 {
 
   to {
     width: 1vw;
+    height: 0vh;
+  }
+}
+
+@keyframes ctr-exp {
+  from {
+    height: 0vh;
+  }
+
+  to {
+    height: 40vh;
+  }
+}
+
+@keyframes ctr-rollup {
+  from {
+    height: 40vh;
+  }
+
+  to {
     height: 0vh;
   }
 }
