@@ -233,7 +233,8 @@ li.menu0 {
   width: 100%;
   overflow: hidden;
   animation: ctr-rollup 1s cubic-bezier(.5, 1.0, .5, 1.0) 1;
-  margin-bottom: 40vh
+  margin-bottom: 40vh;
+  padding: 0vh 0vh;
 }
 
 #contracts p {
@@ -248,6 +249,7 @@ li.menu0 {
 
 #contracts.expand {
   height: 40vh;
+  padding: 10vh 0vh;
   animation: ctr-exp 1s cubic-bezier(.0, .75, .6, 1) 1;
 }
 
@@ -392,19 +394,24 @@ li.menu0 {
 @keyframes ctr-exp {
   from {
     height: 0vh;
+    padding: 0vh 0vh;
   }
 
   to {
     height: 40vh;
+    padding-bottom: 10vh 0vh;
+
   }
 }
 
 @keyframes ctr-rollup {
   from {
+    padding: 10vh 0vh;
     height: 40vh;
   }
 
   to {
     height: 0vh;
+    padding: 0vh 0vh;
   }
 }

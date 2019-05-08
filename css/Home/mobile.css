@@ -235,7 +235,7 @@ li.menu0 {
   width: 100%;
   overflow: hidden;
   animation: ctr-rollup 1s cubic-bezier(.5, 1.0, .5, 1.0) 1;
-  margin-bottom: 40vh
+  margin-bottom: 40vh;
 }
 
 #contracts p {
