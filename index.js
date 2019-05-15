@@ -1,7 +1,7 @@
 var express = require('express');
 var app = new express();
 var path = require('path');
-var index = require('.')
+//var index = require('.')
 
 var languageList = {
   'en-us': 'views/en/index.html',
@@ -9,8 +9,8 @@ var languageList = {
 }
 
 try {
-  //  app.use(express.static(__dirname));
-  app.use("/index", index);
+  app.use(express.static(__dirname));
+  //  app.use("/index", index);
 
   app.all('/*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -40,7 +40,7 @@ app.get("/lang", function (req, res) {
 });
 
 try {
-  var demoPort = 16075;
+  var demoPort = 80;
   console.log("Demo listing at port:", demoPort);
   app.listen(demoPort);
 } catch (e) {
