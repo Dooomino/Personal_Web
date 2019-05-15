@@ -1,6 +1,7 @@
 var express = require('express');
 var app = new express();
 var path = require('path');
+var index = require('.')
 
 var languageList = {
   'en-us': 'views/en/index.html',
@@ -8,7 +9,8 @@ var languageList = {
 }
 
 try {
-  app.use(express.static(__dirname));
+  //  app.use(express.static(__dirname));
+  app.use("/index", index);
 
   app.all('/*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
