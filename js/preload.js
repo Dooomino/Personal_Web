@@ -1,5 +1,5 @@
 window.onload = function () {
-  fetch("http://dooomino.info:16075/lang",
+  fetch("http://dooomino.info:8090/lang",
       //  fetch("http://localhost:16075/lang",
       {
         method: 'GET',

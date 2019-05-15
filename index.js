@@ -40,7 +40,7 @@ app.get("/lang", function (req, res) {
 });
 
 try {
-  var demoPort = 80;
+  var demoPort = 8090;
   console.log("Demo listing at port:", demoPort);
   app.listen(demoPort);
 } catch (e) {
