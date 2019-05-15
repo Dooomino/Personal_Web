@@ -3,11 +3,101 @@
 
 <head>
   <title></title>
-  <script src="js/preload.js"></script>
+  <!--  <script src="js/preload.js"></script>-->
 </head>
 
-<body style="background-color:black">
-  <!--  <p>Redirect page</p>-->
-</body>
+<body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
 
-</html>
+    #loading-cont {
+      margin: 30vh 0;
+      width: 20vh;
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
+
+    .loading {
+      position: absolute;
+      list-style: none;
+      width: 20vh;
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
+
+    .loading .icon {
+      background-color: aquamarine;
+      border-radius: 50%;
+      width: 2vh;
+      height: 2vh;
+    }
+
+    .loading:nth-child(1) {
+      animation: rotate-l 1.5s cubic-bezier(.40, .3, .30, .90) infinite;
+      animation-delay: 0.2s;
+    }
+
+    .loading:nth-child(2) {
+      animation: rotate-l 1.5s cubic-bezier(.40, .3, .30, .90) infinite;
+      animation-delay: 0.4s;
+    }
+
+    .loading:nth-child(3) {
+      animation: rotate-l 1.5s cubic-bezier(.40, .3, .30, .90) infinite;
+      animation-delay: 0.6s;
+    }
+
+    .loading:nth-child(4) {
+      animation: rotate-l 1.5s cubic-bezier(.40, .3, .30, .90) infinite;
+      animation-delay: 0.8s;
+    }
+
+    .loading:nth-child(5) {
+      animation: rotate-l 1.5s cubic-bezier(.40, .3, .30, .90) infinite;
+      animation-delay: 1s;
+    }
+
+
+    @keyframes rotate-l {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <!--  <p>Redirect page</p>-->
+  <div id="loading-cont">
+    <li class="loading">
+      <div class="icon"></div>
+    </li>
+    <li class="loading">
+      <div class="icon"></div>
+    </li>
+    <li class="loading">
+      <div class="icon"></div>
+    </li>
+    <li class="loading">
+      <div class="icon"></div>
+    </li>
+    <li class="loading">
+      <div class="icon"></div>
+    </li>
+  </div>
+</body></html>
