@@ -27,6 +27,8 @@ function toggleBars() {
 
 function goto(el) {
   id = $(el).attr('href');
+  id = id.split('#')
+  id = '#' + id[id.length - 1]
   $(".heads-line").each(function (i, el) {
     el.classList.remove("active");
   });
