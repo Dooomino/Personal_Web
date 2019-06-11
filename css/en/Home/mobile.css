@@ -109,21 +109,26 @@ li.menu0 {
   font-size: 8vh;
 }
 
-#highlight {
-  width: 100%;
-  min-height: 50vh;
-  overflow: hidden;
-}
-
 #header p {
   font-size: 5vw;
 }
 
-#highlight img {
-  object-fit: cover;
+#highlight {
   width: 100%;
+  margin: 0;
+  min-height: 50vh;
+  overflow: hidden;
+  background-image: url("/image/highlight.png");
+  background-size: contain, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2s;
 }
 
+#highlight.show {
+  opacity: 1;
+}
 
 .heads {
   position: relative;

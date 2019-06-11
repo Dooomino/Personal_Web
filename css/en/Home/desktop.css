@@ -114,15 +114,20 @@ li.menu0 {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  background-image: url("/image/highlight.png");
+  background-size: contain, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#highlight.show {
+  opacity: 1;
 }
 
 #header p {
   font-size: 5vh;
-}
-
-#highlight img {
-  object-fit: cover;
-  width: 100%;
 }
 
 .heads {

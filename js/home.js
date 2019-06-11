@@ -62,9 +62,7 @@ window.onload = function () {
           "j": res[i]
         });
       }
-      //      m.sort(function (a, b) {
-      //        return Date.parse(b.time) - Date.parse(a.time);
-      //      })
+
       console.log(m);
       for (i = 0; i < m.length; i++) {
         if (!/CSCI/.test(m[i].name)) {
@@ -81,7 +79,22 @@ window.onload = function () {
   }
   setTypeColor();
 
+  //Load image
+  waitForImage("#highlight");
+
 }
+
+function waitForImage(id) {
+  var background = $(id).attr("src");
+  var img = new Image();
+  img.src = background;
+  img.onload = function () {
+    $(id).addClass("show");
+  }
+  console.log(background);
+}
+
+
 
 function setTypeColor() {
   $(".workClass").each(function (i, el) {
