@@ -87,7 +87,8 @@ window.onload = function () {
 }
 
 function waitForImage(id) {
-  var background = $(id).attr("src");
+  var base = $("base").attr("href");
+  var background = base + $(id).attr("src");
   var img = new Image();
   img.src = background;
   img.onload = function () {
