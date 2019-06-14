@@ -93,6 +93,7 @@ function waitForImage(id) {
   img.onload = function () {
     $(id).addClass("show");
   }
+
   console.log(background);
 }
 
