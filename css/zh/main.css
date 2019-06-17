@@ -19,3 +19,7 @@ a {
 li {
   list-style: none;
 }
+
+#highlight {
+  background-image: url("/image/highlight.png");
+}

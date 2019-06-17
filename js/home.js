@@ -87,15 +87,16 @@ window.onload = function () {
 }
 
 function waitForImage(id) {
-  var base = $("base").attr("href");
-  var background = base + $(id).attr("src");
+  var path = $(id).attr("src")
+  //  console.log(path);
+  var background = path;
   var img = new Image();
   img.src = background;
   img.onload = function () {
     $(id).addClass("show");
   }
 
-  console.log(background);
+  //  console.log(background);
 }
 
 
