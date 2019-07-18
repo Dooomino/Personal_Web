@@ -12,8 +12,8 @@ color5: rgba(70, 70, 85, 1);
   text-align: center;
 }
 
-.logo img {
-  width: 80%;
+#logo {
+  width: 100%;
 }
 
 #icon-back {

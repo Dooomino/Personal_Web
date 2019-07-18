@@ -6,8 +6,9 @@ var colors = [
   "#1F3646"
 ];
 
-
-
+var moving = anime.timeline();
+var smooth = [.65, .2, .66, 1.0];
+var logoAnime;
 //  'rgb(201, 222, 214, 1)',
 //  'rgb(132, 172, 206, 1)',
 //  'rgb(126, 189, 195, 1)',
@@ -52,6 +53,12 @@ function goto(el) {
 
 window.onload = function () {
   $('#header hr').addClass("active");
+
+  $("#icon-back").addClass("active");
+  $("#left-contain").addClass("active");
+  $("#main-contain").addClass("active");
+  $("#menus").addClass("active");
+
   m = [];
   $.get("https://api.github.com/users/dooomino/repos?per_page=1000&sort=newest")
     .done(function (res, rqs) {
@@ -83,6 +90,19 @@ window.onload = function () {
 
   //Load image
   waitForImage("#highlight");
+  logoAnime = moving.add({
+    targets: '#logo line,circle',
+    //    targets: "#logo path",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    stroke: ['rgba(102, 102, 102, 0)', '#fff'],
+    easing: smooth,
+    duration: function (el, i) {
+      return 200 * (i + 1) + 250;
+    },
+    delay: function (el, i) {
+      return 200 * i;
+    }
+  });
 
 }
 
@@ -200,6 +220,7 @@ function hoverborder(event) {
   y = event.clientY;
   deviceWidth = window.innerWidth;
   deviceHeight = window.innerHeight;
+  logoAnime.play()
   if (x <= 0.03 * deviceWidth &
     y >= 0.1 * deviceHeight) {
 

@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <base href="http://www.mino.moe/index/">
-  <!--  <base href="http://127.0.0.1:8090/">-->
+  <!--  <base href="http://127.0.0.1:5857/">-->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="css/en/main.css" type="text/css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -83,7 +83,27 @@
     <div id="left-contain">
       <ul id="menus">
         <li class="logo">
-          <img src="favicon - inv.png" />
+          <!--          <img src="favicon - inv.png" />-->
+          <svg id="logo" viewBox="0 0 400 400">
+            <style>
+              * {
+                fill: none;
+                stroke: #fff;
+                stroke-linecap: round;
+                stroke-miterlimit: 0;
+                stroke-width: 3.5px
+              }
+            </style>
+            <circle cx="169.7" cy="169.7" r="167.2" />
+            <line x1="169.4" y1="336.4" x2="169.4" y2="2.5" />
+            <line x1="51.3" y1="51.3" x2="287.7" y2="287.7" />
+            <line x1="287.8" y1="51.2" x2="287.8" y2="287.7" />
+            <line x1="51.3" y1="51.3" x2="51.3" y2="287.7" />
+            <line x1="2.5" y1="169.7" x2="337" y2="169.7" />
+            <line x1="239.3" y1="100.2" x2="321.8" y2="100.2" />
+            <line x1="100.2" y1="238.8" x2="20" y2="238.8" />
+            <line x1="100.2" y1="238.8" x2="238.8" y2="100.2" />
+          </svg>
         </li>
         <a href="views/en/index.html#header" onclick="goto(this)">
           <li class="menu menu0">Dooomino</li>
@@ -102,6 +122,4 @@
     </div>
   </div>
   <script type="text/javascript" src="js/home.js"></script>
-</body>
-
-</html>
+</body></html>
