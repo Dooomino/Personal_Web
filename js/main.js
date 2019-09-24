@@ -4,9 +4,11 @@ var time = new anime.timeline();
 function fly() {
   var rocket = document.getElementById("rocket");
   var fire = rocket.getElementsByClassName("fire")[0];
+  var launch = document.getElementsByClassName("launch")[0];
 
-  fire.classList.remove("hide");
+  fire.classList.remove('hide');
   fire.classList.add('wave');
+  launch.classList.add('hide');
 
   time.add({
     targets: rocket,
@@ -16,7 +18,7 @@ function fly() {
     translateY: ['0%', '-300%'],
     zIndex: [100, 100],
     complete: () => {
-      document.location = "http://www.mino.moe"
+      document.location = "http://www.mino.moe";
     }
   })
 }
