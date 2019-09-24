@@ -1,0 +1,148 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.text-contain {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 20%;
+  font-family: sans-serif;
+  animation: word-float 5s cubic-bezier(.4, .0, .6, 1.0) infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+
+}
+
+.errtext {
+  margin: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-shadow: 2px 2px black;
+}
+
+.launch {
+  margin: auto;
+}
+
+.lv1 {
+  font-size: 10vh;
+}
+
+.lv2 {
+  font-size: 5vh;
+}
+
+.rocket-contain {
+  margin-top: 20%;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+}
+
+.wave {
+  animation: wave-width 0.5s cubic-bezier(.38, .57, .58, 1) infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+
+#rocket {
+  position: relative;
+  margin: auto;
+  width: 10%;
+  padding-top: 2%;
+  animation: pre-fly-out 1s cubic-bezier(.42, .44, .58, 1) 1;
+  animation-fill-mode: both;
+  text-align: center;
+  z-index: 101;
+}
+
+#rocket:hover {
+  padding-top: 0%;
+  animation: pre-fly-in 1s cubic-bezier(.42, .44, .58, 1) 1;
+  animation-fill-mode: both;
+}
+
+.rocket-body {
+  position: relative;
+  z-index: 100;
+  margin: auto;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.fire {
+  position: relative;
+  z-index: 99;
+  margin: auto;
+  width: 35%;
+}
+
+.ground-contain {
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+}
+
+.ground {
+  background-color: wheat;
+  margin: auto;
+  width: 100vw;
+  height: 90%;
+  border-radius: 50%;
+  transform: scaleX(1.5);
+}
+
+@keyframes word-float {
+  from {
+    top: 19%;
+  }
+
+  to {
+    top: 21%;
+  }
+}
+
+@keyframes wave-width {
+  from {
+    width: 35%;
+  }
+
+  to {
+    width: 30%;
+  }
+
+}
+
+
+@keyframes pre-fly-out {
+  from {
+    padding-top: 0%;
+  }
+
+  to {
+    padding-top: 2%;
+  }
+}
+
+@keyframes pre-fly-in {
+  from {
+    padding-top: 2%;
+  }
+
+  to {
+    padding-top: 0%;
+  }
+}
