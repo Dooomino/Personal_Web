@@ -1,0 +1,140 @@
+body{
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  overflow-x: hidden;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
+/*head*/
+header{
+  width: 100%;
+  display: inline-flex;
+}
+
+.header-title{
+  font-size: xx-large;
+  margin: 1.5% 1% 1% 5%;
+  animation: header-title-in 0.7s ease-in-out 1;
+}
+
+.navbar{
+  display: inline-block;
+  font-size: x-large;
+  margin: 2%;
+  padding: 0;
+  text-align: right;
+}
+
+.navbar a{
+  margin: 1% 2%;
+  padding: 1%;
+  color: white;
+  height: 30%;
+  width:10%;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 2px;
+  animation-name: nav-in;
+  animation-duration: 0.5s;
+  animation-delay: calc(var(--order) * 0.1s);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  transition: border-color 0.5s;
+}
+
+.navbar a:hover{
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+/*main*/
+.welcome{
+  display: inline-block;
+  background-image: url("../../images/cover.jpg");
+  background-position: bottom center;
+}
+.welcome .left{
+  min-height: 90%;
+}
+
+.welcome .right{
+  min-height: 90%;
+  background-color: rgba(0,0,0,0.5);
+  animation: welcome-in 0.5s ease-in-out 1;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+.welcome h1{
+  margin:  30% 10% 2% 10%;
+}
+
+.welcome h2{
+  font-size: large;
+  margin:  10% 10% 0 50%;
+  animation: scroll-rep 1.5s ease-in-out infinite;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+.arrow{
+  margin: 0 10% 10% 50%;
+  font-size: xx-large;
+}
+
+.intro-contain{
+  display: inline-block;
+  min-height: 80%;
+}
+.intro{
+  text-align: center;
+}
+.intro h1{
+  margin: 10% 2% 2% 2%;
+  font-size: xx-large;
+}
+.mySp{
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 2% 0;
+  text-align: center;
+}
+.mySp li{
+  width: 100%;
+  margin: 5% 0;
+  font-size: x-large;
+  padding: 0;
+  list-style: none;
+}
+
+.page-btn{
+  font-size: x-large;
+  color: white;
+  background-color: black;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+  padding: 1%;
+  transition: color 0.5s,background-color 0.5s;
+}
+
+.page-btn:hover{
+  color: black;
+  background-color: white;
+}
+
+/*bottom*/
+footer{
+  animation: footer-in 0.5s ease-in-out 1;
+}
+
+.footer-attr{
+  text-align: center;
+}
