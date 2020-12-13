@@ -1,13 +1,3 @@
-@keyframes header-title-in {
-  from{
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-  to{
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 @keyframes scroll-rep {
   from{
     transform: translateY(0);
@@ -26,25 +16,5 @@
   to{
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@keyframes footer-in {
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-
-@keyframes nav-in {
-  from{
-    transform: translateX(-50%);
-    opacity: 0;
-  }
-  to{
-    transform: translateX(0);
-    opacity: 1;
   }
 }
