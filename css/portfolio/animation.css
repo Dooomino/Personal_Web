@@ -1,30 +1,16 @@
-@keyframes header-title-in {
-  from{
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-  to{
-    transform: translateX(0);
+.aos-animate{
     opacity: 1;
-  }
 }
 
-@keyframes footer-in {
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-
-@keyframes nav-in {
-  from{
-    transform: translateX(-50%);
-    opacity: 0;
-  }
-  to{
-    transform: translateX(0);
-    opacity: 1;
-  }
+@keyframes arrow-rep {
+    from{
+        opacity: 0.6;
+        text-shadow: 2px 2px black;
+        transform: translateY(-10%);
+    }
+    to{
+        opacity: 1;
+        text-shadow: 2px 6px black;
+        transform: translateY(0);
+    }
 }

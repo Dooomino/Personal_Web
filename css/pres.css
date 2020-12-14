@@ -33,7 +33,13 @@ body{
 }
 a{
     text-decoration: none;
+    color: white;
 }
+
+li{
+    list-style: none;
+}
+
 
 /*head*/
 header{
@@ -80,11 +86,33 @@ header{
 /*footer*/
 footer{
     margin: 5% 0 0 0;
+    color: #9c9c9c;
     animation: footer-in 0.5s ease-in-out 1;
+}
+
+footer a{
+    color: #9c9c9c;
 }
 
 .footer-attr{
     text-align: center;
+    margin: 0 0 2%;
+}
+
+.page-btn{
+    font-size: x-large;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    padding: 1%;
+    transition: color 0.5s,background-color 0.5s;
+}
+
+.page-btn:hover{
+    color: black;
+    background-color: white;
 }
 
 /*Animations*/
