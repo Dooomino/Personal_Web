@@ -8,6 +8,8 @@
 
 .load{
     width: 33.3%;
+    animation: loading 1s ease-in-out infinite;
+    animation-direction: alternate;
 }
 
 .half{

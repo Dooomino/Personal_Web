@@ -1,6 +1,14 @@
 .aos-animate{
     opacity: 1;
 }
+@keyframes loading {
+    from{
+        background-color: rgb(157, 157, 157);
+    }
+    to{
+        background-color: rgb(255, 255, 255);
+    }
+}
 
 @keyframes arrow-rep {
     from{
