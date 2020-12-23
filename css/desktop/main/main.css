@@ -1,13 +1,15 @@
 .welcome{
   display: inline-block;
-  background-image: url("../../images/cover.jpg");
+  background-image: url("../../../images/cover.jpg");
   background-position: bottom center;
 }
 .welcome .left{
+  width: 50%;
   min-height: 90%;
 }
 
 .welcome .right{
+  width: 50%;
   min-height: 90%;
   background-color: rgba(0,0,0,0.5);
   animation: welcome-in 0.5s ease-in-out 1;
@@ -15,7 +17,7 @@
   animation-delay: 0.5s;
 }
 .welcome h1{
-  margin:  30% 10% 2% 10%;
+  margin:  30% 10% 2%;
 }
 
 .welcome h2{
@@ -57,4 +59,3 @@
   padding: 0;
   list-style: none;
 }
-

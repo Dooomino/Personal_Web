@@ -1,0 +1,173 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.row {width: 100%;}
+.left{width: 50%;float: left}
+.right{width: 50%;float: right;}
+.slf{width: 0;float: left;min-height: 30%;display:inline-block;}
+.smf{width: 100%;display:inline-block;}
+.srf{width: 0;float: right;min-height: 30%;display:inline-block;}
+.parallax {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    background-color: black;
+    overflow-x: hidden;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+
+/*head*/
+header{
+    width: 100%;
+    /*display: inline-flex;*/
+}
+.header-gap{
+    width: 0;
+}
+
+.header-title{
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    margin: 2% 0 1%;
+    animation: header-title-in 0.7s ease-in-out 1;
+}
+
+.navbar{
+    width: 100%;
+    display: inline-block;
+    font-size: large;
+    margin: 1%;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar a{
+    margin: 1% 2%;
+    padding: 1%;
+    color: white;
+    height: 30%;
+    width:10%;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 2px;
+    animation-name: nav-in;
+    animation-duration: 0.5s;
+    animation-delay: calc(var(--order) * 0.1s);
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    transition: border-color 0.5s;
+}
+
+.navbar a:hover{
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+}
+/*footer*/
+footer{
+    margin: 5% 0 0 0;
+    color: #9c9c9c;
+    animation: footer-in 0.5s ease-in-out 1;
+}
+
+footer a{
+    color: #9c9c9c;
+}
+
+.footer-attr{
+    text-align: center;
+    margin: 0 0 2%;
+    width: 80%;
+}
+
+.page-btn{
+    font-size: large;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    padding: 1%;
+    transition: color 0.5s,background-color 0.5s;
+}
+
+.page-btn:hover{
+    color: black;
+    background-color: white;
+}
+
+/*Animations*/
+@keyframes header-title-in {
+    from{
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes footer-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes nav-in {
+    from{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/*Debug*/
+.phold{
+    height: 300px;
+}
+.chold{
+    background-color: #ff5800;
+}
+
+.chold1{
+    background-color: aquamarine;
+}
+
+.chold2{
+    background-color: olive;
+}
+

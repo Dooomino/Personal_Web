@@ -1,0 +1,23 @@
+.contact-contain{
+    background-image: url("../../../images/cover.jpg");
+    min-height: 80%;
+}
+
+.contact{
+    height: 80%;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    animation: contact-in 1s ease-in-out 1;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+.avatar{
+    border-radius: 50%;
+    margin: 5% 0;
+}
+
+.mail{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+}

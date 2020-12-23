@@ -1,0 +1,79 @@
+.project-contain{
+    margin: 0;
+    padding: 0;
+}
+
+.ll{
+    text-align: left;
+}
+
+.rl{
+    text-align: right;
+}
+
+.intro-contain{
+    background-image: url("../../../images/cover.jpg");
+    min-height: 80%;
+}
+
+.intro{
+    background-color: rgba(0,0,0,0.5);
+    height: 80%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.intro h1{
+    padding: 10% 0 0;
+}
+
+.arrow{
+    padding: 10% 0 0 ;
+    font-size: xx-large;
+    animation: arrow-rep 1s ease-in-out infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    text-shadow: 2px 2px black;
+}
+
+.intro h2{
+    margin: 0 10% 0;
+}
+
+.project{
+    margin: 5% 0;
+    min-height: 30%;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.project div{
+    float: left;
+    text-align: center;
+}
+
+.pj-*{
+    text-align: center;
+    height: 100%;
+    padding: 0 0 0 2%;
+}
+
+.project img,video{
+    width: 96%;
+    margin: 1% 2%;
+}
+
+.project h2{
+    padding: 0 0 5%;
+    margin: 0 2% 5%;
+    font-size: medium;
+    font-weight: normal;
+}
+
+.top{
+    padding: 5% 0;
+    text-align: center;
+    min-height: 10%;
+}

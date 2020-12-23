@@ -12,21 +12,20 @@ li{
 
 h1{
   width: 100%;
-  float: left;
   text-align: center;
 }
 
 h2{
   width: 100%;
-  float: left;
+  font-size: large;
   text-align: center;
   font-weight: normal;
 }
 /*portfolio.js*/
 .about-contain{
-  background-image: url("../../images/cover.jpg");
-  overflow-y: hidden;
-  height: 90%;
+  background-image: url("../../../images/cover.jpg");
+  overflow: hidden;
+  height: 100%;
 }
 
 .about-contain div{
@@ -35,7 +34,8 @@ h2{
 }
 
 .about{
-  padding: 5% 0;
+  width: 100%;
+  padding: 2%;
   text-align: center;
 }
 
@@ -44,13 +44,17 @@ h2{
 }
 
 .about h2{
+  width: 80%;
   animation: smooth-in 1s ease-in-out 1;
   animation-delay: 0.5s;
   animation-fill-mode: both;
-  padding: 0 0 2%;
+  padding: 0 10% 2%;
 }
 
 .page-btn{
+  animation: smooth-in 1s ease-in-out 1;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
   background-color: transparent;
 }
 
@@ -66,31 +70,43 @@ h2{
   animation: smooth-in 1s ease-in-out 1;
 }
 
+table{
+  width: 100%;
+  font-size: large;
+  border-collapse: collapse;
+}
+
+th{
+  font-weight: lighter;
+  text-align: right;
+  border-right: 2px solid white;
+}
+
+tr{
+  animation: smooth-in 1s ease-in-out 1;
+  animation-fill-mode: both;
+}
+
+th,td{
+  width: 50%;
+  padding: 1% 2% ;
+}
+
+.sk-row{
+  text-align: center;
+}
+
+.sk-head{
+  animation: smooth-in 1s ease-in-out 1;
+  animation-delay: calc(var(--order) * 0.1s);
+  animation-fill-mode: both;
+}
+
 .sk-itm{
   animation: smooth-in 1s ease-in-out 1;
   animation-delay: calc(var(--order) * 0.1s);
   animation-fill-mode: both;
 }
 
-.si li,.sd li{
-  font-size: x-large;
-}
-
-.si{
-  margin: 0 2% 0 0;
-}
-
-.sd{
-  margin: 0 0 0 2%;
-}
-
-.si li{
-  text-align: right;
-  margin: 2% 0;
-}
-
-.sd li{
-  text-align: left;
-  margin: 2% 0;
-}
+.
 

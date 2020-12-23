@@ -1,0 +1,8 @@
+@import url("../../mobile/portfolio/mobile-main.css") only screen and (min-width:480px );
+@import url("../../mobile/portfolio/mobile-animation.css") only screen and (min-width:480px );
+@import url("../../mobile/mobile-pres.css") only screen and (min-width:480px );
+
+
+@import url("../../desktop/portfolio/main.css") only screen and (min-width:1024px );
+@import url("../../desktop/portfolio/animation.css") only screen and (min-width:1024px );
+@import url("../../desktop/pres.css") only screen and (min-width:1024px );

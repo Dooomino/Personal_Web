@@ -5,9 +5,7 @@
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes" />
 <!--  <link rel="icon" type="images/png" href="favicon.png">-->
-  <link rel="stylesheet" href="css/pres.css">
-  <link rel="stylesheet" href="css/main/main.css" type="text/css" />
-  <link rel="stylesheet" href="css/main/animation.css" type="text/css" />
+  <link id="styles" rel="stylesheet" href="css/entry/main/main.css" type="text/css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
@@ -19,11 +17,11 @@
         type="text/css">
 </head>
 
-<body>
+<body style="background-color: black;">
   <header>
-    <p class="header-title col-2">Yudi Tao</p>
-    <span class="col-4"></span>
-    <nav class="navbar col-6">
+    <p class="col-2 header-title">Yudi Tao</p>
+    <span class="col-4 header-gap"></span>
+    <nav class="col-6 navbar">
       <a style="--order: 1;" href="#">Home</a>
       <a style="--order: 2;" href="pages/about.html">About Me</a>
       <a style="--order: 3;" href="pages/portfolio.html">Projects</a>
@@ -50,7 +48,11 @@
           <li class="col-6" style="--order: 3">Web Design</li>
           <li class="col-6" style="--order: 4">Graphics Design</li>
         </ul>
-        <a class="page-btn" href="pages/about.html#skill">And there are more things I could do..</a>
+        <button class="page-btn"
+                onclick="location.href='pages/about.html#skill'">
+          More things that I could do
+          <strong>...</strong>
+        </button>
       </div>
       <div class="srf"></div>
     </div>
