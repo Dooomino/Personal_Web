@@ -1,6 +1,6 @@
-@import url("../../mobile/about/mobile-main.css") only screen and (min-width:480px );
-@import url("../../mobile/about/mobile-animation.css") only screen and (min-width:480px );
-@import url("../../mobile/mobile-pres.css") only screen and (min-width:480px );
+@import url("../../mobile/about/mobile-main.css") only screen and (max-width:1023px );
+@import url("../../mobile/about/mobile-animation.css") only screen and (max-width:1023px );
+@import url("../../mobile/mobile-pres.css") only screen and (max-width:1023px );
 
 @import url("../../desktop/about/main.css") only screen and (min-width:1024px );
 @import url("../../desktop/about/animation.css") only screen and (min-width:1024px );
