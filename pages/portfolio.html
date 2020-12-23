@@ -21,7 +21,7 @@
 </head>
 
 <body>
-<script>
+<script type="text/javascript">
     AOS.init({
         duration: 1200,
     })
@@ -37,6 +37,9 @@
     </nav>
 </header>
 <div class="progress"></div>
+<script type="text/javascript">
+    document.getElementsByClassName("progress")[0].classList.add("load");
+</script>
 <div class="main-body row">
     <div class="intro-contain row parallax">
         <div data-aos="fade-up" class="intro row">

@@ -6,6 +6,10 @@
     transition: width 1s,min-height 1s;
 }
 
+.load{
+    width: 33.3%;
+}
+
 .half{
     width: 50%;
 }
