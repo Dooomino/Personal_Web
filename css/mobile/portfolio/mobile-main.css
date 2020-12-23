@@ -44,10 +44,6 @@
     transition: opacity 1s;
 }
 
-.intro h1{
-    padding: 10% 0 0;
-}
-
 .arrow{
     padding: 10% 0 0 ;
     font-size: xx-large;
@@ -57,8 +53,14 @@
     text-shadow: 2px 2px black;
 }
 
+.intro h1{
+    margin: 0;
+    padding: 10% 0 0;
+}
+
 .intro h2{
     margin: 0 10% 0;
+
 }
 
 .project{

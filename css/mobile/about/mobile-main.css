@@ -1,31 +1,7 @@
-ul{
-  margin: 0;
-  padding: 0;
-}
-
-li{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-h1{
-  width: 100%;
-  text-align: center;
-}
-
-h2{
-  width: 100%;
-  font-size: large;
-  text-align: center;
-  font-weight: normal;
-}
-/*portfolio.js*/
 .about-contain{
   background-image: url("../../../images/cover.jpg");
   overflow: hidden;
-  height: 100%;
+  height: 150%;
 }
 
 .about-contain div{
@@ -40,11 +16,16 @@ h2{
 }
 
 .about h1{
+  width: 100%;
+  text-align: center;
   animation: smooth-in 1s ease-in-out 1;
 }
 
 .about h2{
   width: 80%;
+  font-size: large;
+  text-align: center;
+  font-weight: normal;
   animation: smooth-in 1s ease-in-out 1;
   animation-delay: 0.5s;
   animation-fill-mode: both;
@@ -67,6 +48,8 @@ h2{
 }
 
 .skill h1{
+  width: 100%;
+  text-align: center;
   animation: smooth-in 1s ease-in-out 1;
 }
 
