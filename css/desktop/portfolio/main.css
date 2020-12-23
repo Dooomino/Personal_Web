@@ -1,3 +1,23 @@
+.progress{
+    display: inline-block;
+    min-height: 1%;
+    width: 0;
+    background-color: rgba(255,255,255,100);
+    transition: width 1s,min-height 1s;
+}
+
+.half{
+    width: 50%;
+}
+
+.ready{
+    width: 100%;
+}
+
+.end{
+    min-height: 0;
+}
+
 .project-contain{
     margin: 0;
     padding: 0;
@@ -35,6 +55,10 @@
     animation-direction: alternate;
     animation-fill-mode: both;
     text-shadow: 2px 2px black;
+}
+
+.intro h1{
+    margin: 0;
 }
 
 .intro h2{
