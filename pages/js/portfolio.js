@@ -1,5 +1,4 @@
-function topFunction() {
-  // document.body.scrollTop = 0; //  Safari
-  // document.documentElement.scrollTop = 0; //  Chrome, Firefox, IE , Opera
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-}
+$("#toTop").on("click",function(e){
+  e.preventDefault();
+  var c = $("html, body").stop().animate({ scrollTop: 0 },1000);
+});

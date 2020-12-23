@@ -1,3 +1,6 @@
+@font-face{
+    font-display: swap;
+}
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -23,11 +26,10 @@
     background-size: cover;
 }
 
-body{
+html,body{
     margin: 0;
     width: 100%;
     background-color: black;
-    overflow-x: hidden;
     color: white;
     font-family: 'Raleway', sans-serif;
 }
@@ -94,6 +96,7 @@ footer{
     margin: 5% 0 0 0;
     color: #9c9c9c;
     animation: footer-in 0.5s ease-in-out 1;
+    text-align: center;
 }
 
 footer a{
@@ -102,8 +105,13 @@ footer a{
 
 .footer-attr{
     text-align: center;
+    width: 100%;
     margin: 0 0 2%;
-    width: 80%;
+}
+
+.footer-attr img{
+    width: 10%;
+    height: auto;
 }
 
 .page-btn{

@@ -66,6 +66,8 @@
 }
 
 .project h2{
+    font-size: x-large;
+    font-weight: normal;
     padding: 0 0 5%;
     margin: 0 2% 0;
 }
