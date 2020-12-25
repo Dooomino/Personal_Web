@@ -16,11 +16,16 @@
   animation-fill-mode: both;
   animation-delay: 0.5s;
 }
+
 .welcome h1{
   margin:  10% 10% 2%;
 }
 
 .welcome h2{
+  margin:  10% 10% 2%;
+}
+
+.welcome h3{
   font-size: large;
   margin:  10% 10% 0 50%;
   animation: scroll-rep 1.5s ease-in-out infinite;
