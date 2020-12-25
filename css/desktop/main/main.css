@@ -21,6 +21,10 @@
 }
 
 .welcome h2{
+  margin:  0 10% 2%;
+}
+
+.welcome h3{
   font-size: large;
   margin:  10% 10% 0 50%;
   animation: scroll-rep 1.5s ease-in-out infinite;

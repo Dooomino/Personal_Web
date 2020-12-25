@@ -1,15 +1,10 @@
 .about-contain{
   background-image: url("../../../images/cover.jpg");
-  overflow-y: hidden;
-  min-height: 120%;
-}
-
-/* About */
-.about-contain div{
-  background-color: rgba(0,0,0,0.5);
+  overflow-x: hidden;
   min-height: 100%;
 }
 
+/* About */
 .page-btn{
   animation: smooth-in 1s ease-in-out 1;
   animation-delay: 0.5s;
@@ -17,6 +12,9 @@
 }
 
 .about{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
   padding: 5% 0;
   text-align: center;
 }
@@ -28,30 +26,15 @@
 }
 
 .about h2{
-  width: 100%;
+  width: 80%;
   font-size: x-large;
   text-align: center;
   font-weight: normal;
   animation: smooth-in 1s ease-in-out 1;
   animation-delay: 0.5s;
   animation-fill-mode: both;
-  padding: 0 0 2%;
-}
-
-table{
-  width: 100%;
-  font-size: large;
-}
-
-th{
-  font-weight: lighter;
-  text-align: right;
-  border-right: 2px solid white;
-}
-
-th,td{
-  width: 50%;
-  padding: 1% 2% ;
+  margin: 0 10%;
+  padding: 2% 0;
 }
 
 .sk-row{
@@ -70,6 +53,22 @@ th,td{
   width: 100%;
   text-align: center;
   animation: smooth-in 1s ease-in-out 1;
+}
+
+table{
+  width: 100%;
+  font-size: large;
+}
+
+th{
+  font-weight: lighter;
+  text-align: right;
+  border-right: 1px solid white;
+}
+
+th,td{
+  width: 50%;
+  padding: 2% 2% ;
 }
 
 tr{
