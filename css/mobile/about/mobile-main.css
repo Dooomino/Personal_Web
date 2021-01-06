@@ -87,5 +87,14 @@ tr{
   animation-fill-mode: both;
 }
 
-.
+#toTop{
+  width: 20%;
+}
+
+.top{
+  width: 100%;
+  padding: 5% 0;
+  text-align: center;
+  min-height: 10%;
+}
 
