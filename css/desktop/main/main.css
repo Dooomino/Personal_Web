@@ -1,6 +1,6 @@
 .welcome{
   display: inline-block;
-  background-image: url("../../../images/cover.jpg");
+  background-image: url("../../../images/cover.webp");
   background-position: bottom center;
 }
 .welcome .left{
