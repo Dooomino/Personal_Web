@@ -13,6 +13,7 @@
 }
 
 .avatar{
+    width:20%;
     border-radius: 50%;
     margin: 5% 0;
 }
