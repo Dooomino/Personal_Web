@@ -93,8 +93,9 @@
 }
 
 .project img,video{
-    width: 96%;
-    margin: 1% 2%;
+    width: 80%;
+    /*max-height: 50%;*/
+    margin: 1% 1%;
 }
 
 .project h2{
