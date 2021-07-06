@@ -12,8 +12,14 @@ $(window).on('ready', function(e) {
 
 $(window).on('load', function(e) {
   $(".progress").addClass("ready");
+  $(".loading-text").animate({opacity:0,height:0},1000);
+  $(".done-text").css("display","block");
+
+  setTimeout(function(){
+    $(".done-text").animate({opacity:1},1000);
+  },450);
 
   setTimeout(function (){
     $(".progress").addClass("end");
-  },2000);
+  },800);
 });

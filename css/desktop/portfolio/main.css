@@ -115,3 +115,7 @@
     text-align: center;
     min-height: 10%;
 }
+
+.done-text{
+    opacity: 0;
+}
