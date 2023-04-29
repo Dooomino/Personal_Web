@@ -9,6 +9,7 @@
   animation: smooth-in 1s ease-in-out 1;
   animation-delay: 0.5s;
   animation-fill-mode: both;
+  margin-bottom: 2vh;
 }
 
 .about{
@@ -33,7 +34,7 @@
   animation: smooth-in 1s ease-in-out 1;
   animation-delay: 0.5s;
   animation-fill-mode: both;
-  margin: 0 10%;
+  margin: 10% 10%;
   padding: 2% 0;
 }
 
